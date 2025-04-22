@@ -1,0 +1,31 @@
+.hero {
+    min-height: 100vh;
+    background-image: url("../../images/bg_1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* position: relative; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--shade-of-black);
+    opacity: 0.5;
+}
+
+.hero h1{
+    font-size: 3.5rem;
+    color: white;
+    width: 90%;
+    text-align: center;
+    z-index: 2;
+    font-family: var(--poppins);
+    text-transform: capitalize;
+}

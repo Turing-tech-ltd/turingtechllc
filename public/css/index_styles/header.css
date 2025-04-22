@@ -1,0 +1,79 @@
+:root{
+    --white-color: #f6f6f6;
+    --shade-of-black: rgb(26, 26, 26);
+    --deep-dark: #121212;
+    --orange: #ff9933;
+    --red: #e5062f;
+    /* fonts */
+    --poppins: "Poppins", sans-serif;
+    --roboto: "Roboto", sans-serif;
+}
+  
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 50;
+}
+
+header figure {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0 2rem;
+}
+
+header img{
+    width: 3rem;
+    height: auto;
+}
+
+header figcaption{
+    color: var(--white-color);
+    font-family: var(--poppins);
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+header > div{
+    display: flex;
+    background-color: var(--shade-of-black);
+}
+
+header > div > div{
+    border-right: 1px solid rgba(246, 246, 246, 0.1);
+    display: flex;
+    /* padding: 2rem; */
+    background-color: var(--shade-of-black);
+}
+
+header > div > div:hover{
+    cursor: pointer;
+    filter: brightness(0.5);
+}
+
+header button{
+    background: none;
+    border: none;
+    color: var(--white-color);
+    font-size: 1.35rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+}
+
+header button:hover{
+    cursor: pointer;
+}
+
+header > div > div:first-child{
+    position: relative;
+}
+
