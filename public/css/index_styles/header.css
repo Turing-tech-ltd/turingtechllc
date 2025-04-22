@@ -77,20 +77,3 @@ header > div > div:first-child{
     position: relative;
 }
 
-
-/* Dropdown */
-.dropdown{
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    display: none;
-    flex-direction: column;
-    /* justify-content: space-between; */
-    background-color: #ff9933;
-}
-
-.dropdown > div{
-    display: flex;
-    justify-content: space-between;
-}
