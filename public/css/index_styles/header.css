@@ -47,7 +47,13 @@ header > div{
 header > div > div{
     border-right: 1px solid rgba(246, 246, 246, 0.1);
     display: flex;
-    padding: 2rem;
+    /* padding: 2rem; */
+    background-color: var(--shade-of-black);
+}
+
+header > div > div:hover{
+    cursor: pointer;
+    filter: brightness(0.5);
 }
 
 header button{
@@ -58,4 +64,33 @@ header button{
     display: flex;
     align-items: center;
     gap: 1rem;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+}
+
+header button:hover{
+    cursor: pointer;
+}
+
+header > div > div:first-child{
+    position: relative;
+}
+
+
+/* Dropdown */
+.dropdown{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    background-color: #ff9933;
+}
+
+.dropdown > div{
+    display: flex;
+    justify-content: space-between;
 }
