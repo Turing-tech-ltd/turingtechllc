@@ -91,10 +91,9 @@ header button i{
     border-top: 1px solid rgba(246, 246, 246, 0.1);
     min-height: calc(100vh - 5rem); 
     padding: 2rem;
-    /* overflow-y: scroll; */
-    /* display: none; */
+    display: none;
     opacity: 0; 
-    transition: opacity 0.3s ease, visibility 0.3s ease; 
+    transition: opacity 0.3s ease, display 0.3s ease; 
     z-index: 30;
 }
 
@@ -113,7 +112,6 @@ header li a:hover{
 }
 
 .active{
-    /* visibility: visible;  */
     display: block;
     opacity: 1; 
 }
