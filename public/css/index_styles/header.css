@@ -34,7 +34,7 @@ header figure {
 }
 
 header img{
-    width: 2.5rem;
+    width: 3rem;
     height: auto;
 }
 
@@ -131,7 +131,7 @@ header li a:hover{
     }
 
     header img{
-        width: 3rem;
+        width: 4rem;
     }
 
     header figcaption{
