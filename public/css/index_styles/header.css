@@ -8,13 +8,19 @@
     --poppins: "Poppins", sans-serif;
     --roboto: "Roboto", sans-serif;
 }
+
+.top_wrapper{
+    position: relative;
+    width: 100%;
+}
   
 
 header{
     width: 100%;
+    height: 5rem;
     display: flex;
     justify-content: space-between;
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     z-index: 50;
@@ -24,11 +30,11 @@ header figure {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0 2rem;
+    padding: 0 1rem;
 }
 
 header img{
-    width: 3rem;
+    width: 2.5rem;
     height: auto;
 }
 
@@ -36,24 +42,23 @@ header figcaption{
     color: var(--white-color);
     font-family: var(--poppins);
     font-weight: 600;
-    font-size: 1.3rem;
+    font-size: 0.8rem;
 }
 
 header > div{
     display: flex;
-    background-color: var(--shade-of-black);
 }
 
-header > div > div{
-    border-right: 1px solid rgba(246, 246, 246, 0.1);
-    display: flex;
-    /* padding: 2rem; */
+/* header > div > div{
     background-color: var(--shade-of-black);
+} */
+
+.search{
+    display: none;
 }
 
-header > div > div:hover{
-    cursor: pointer;
-    filter: brightness(0.5);
+.menu{
+    display: none;
 }
 
 header button{
@@ -66,14 +71,103 @@ header button{
     gap: 1rem;
     width: 100%;
     height: 100%;
-    padding: 2rem;
+    padding: 1rem 1rem 1rem 0;
 }
 
 header button:hover{
     cursor: pointer;
 }
 
-header > div > div:first-child{
-    position: relative;
+header button i{
+    font-size: 1.5rem;
 }
 
+.dropdown {
+    position: fixed;
+    left: 0;
+    top: 5rem; 
+    background-color: var(--shade-of-black);
+    width: 100vw; 
+    border-top: 1px solid rgba(246, 246, 246, 0.1);
+    min-height: calc(100vh - 5rem); 
+    padding: 2rem;
+    /* overflow-y: scroll; */
+    /* display: none; */
+    opacity: 0; 
+    transition: opacity 0.3s ease, visibility 0.3s ease; 
+    z-index: 30;
+}
+
+.dropdown li{
+    list-style: none;
+    line-height: 4rem;
+}
+
+.dropdown a {
+    font-size: 1.6rem;
+    text-transform: capitalize;
+}
+
+header li a:hover{
+    color: var(--red);
+}
+
+.active{
+    /* visibility: visible;  */
+    display: block;
+    opacity: 1; 
+}
+
+@media (min-width: 768px){
+    .dropdown a {
+        font-size: 1.8rem;
+    }
+}
+
+
+@media (min-width: 960px){
+    header figure {
+        padding: 0 2rem;
+    }
+
+    header img{
+        width: 3rem;
+    }
+
+    header figcaption{
+        font-size: 1.3rem;
+    }
+
+    header > div{
+        background-color: var(--shade-of-black);
+    }
+
+    header > div > div{
+        border-right: 1px solid rgba(246, 246, 246, 0.1);
+        display: flex;
+        /* padding: 2rem; */
+        background-color: var(--shade-of-black);
+    }
+
+    .search{
+        display: block;
+    }
+
+    .menu{
+        display: block;
+    }
+
+    header > div > div:hover{
+        cursor: pointer;
+        filter: brightness(0.5);
+    }
+
+    header button{
+        padding: 2rem;
+    }
+
+    .dropdown a {
+        font-size: 2rem;
+    }
+    
+}

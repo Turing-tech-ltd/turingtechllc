@@ -33,37 +33,55 @@
 
 <body>
 
-    <header>
-        <figure>
-            <img src="./images/devcrest_logo.png" alt="logo" loading="lazy">
 
-            <figcaption>TuringTech LLC</figcaption>
-        </figure>
+    <div class="top_wrapper">
 
-        <div>
+        <header class="desktop">
+            <figure>
+                <img src="./images/devcrest_logo.png" alt="logo" loading="lazy">
+    
+                <figcaption>TuringTech LLC</figcaption>
+            </figure>
+    
             <div>
-                <button id="search">
-                    <i class="fa-solid fa-magnifying-glass"></i> 
-                    Search
-                </button>
+                <div>
+                    <button id="search">
+                        <i class="fa-solid fa-magnifying-glass"></i> 
+                        <span class="search">search</span>
+                    </button>
+                </div>
+    
+                <div class="menu-container">
+                    <button id="toggler">
+                        <i class="fa-solid fa-bars"></i>
+                        <span class="menu">menu</span>
+                    </button>
+                </div>
             </div>
+        </header>
 
-            <div>
-                <button id="menu-open">
-                    <i class="fa-solid fa-bars"></i>
-                    menu
-                </button>
-            </div>
-        </div>
-    </header>
+        <!-- dropdown -->
+        <ul class="dropdown" id="dropdown">
+            <li><a href="#">home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Programs</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
 
-    <!-- Hero -->
-     <section class="hero">
+        <!-- Hero -->
+        <section class="hero">
             <h1>
                 We train the workforce of the future! And put them to work today.
             </h1>
-     </section>
+        </section>
 
+    </div>
+
+    
+
+    
+    <script src="./js/menu.js"></script>
 </body>
 
 </html>

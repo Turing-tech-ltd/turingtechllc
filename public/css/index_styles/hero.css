@@ -4,8 +4,6 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    /* position: relative; */
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,11 +19,16 @@
 }
 
 .hero h1{
-    font-size: 3.5rem;
+    font-size: 1.3rem;
+    line-height: 2.5rem;
     color: white;
     width: 90%;
     text-align: center;
     z-index: 2;
     font-family: var(--poppins);
     text-transform: capitalize;
+}
+
+@media (min-width: 768px){
+
 }
