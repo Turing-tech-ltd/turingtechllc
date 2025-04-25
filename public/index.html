@@ -77,28 +77,40 @@
                     We train the workforce of the future! And put them to work today.
                 </h1>
     
-                <button>Get Started Today</button>
+                <button id="get_started">Get Started Today</button>
             </div>
         </section>
 
     </div>
 
-    <form action="" class="container">
+    <form action="" class="container" id="form">
         <div class="form_header">
             <h2>Let's get started</h2>
             <button id="close_btn_form"><i class="fa-solid fa-xmark"></i></button>
         </div>
 
-        <div class="form_fn">
-            <label for="first_name">first name</label>
-            <input type="text" name="first_name" placeholder="first name" required>
+        <div class="entry">
+            <div class="full_name_form">
+                <input type="text" name="first_name" placeholder="first name" required>
+                <input type="text" name="last_name" placeholder="last name" required>
+            </div>
+            <input type="email" name="email" placeholder="email" required>
+            <input type="text" name="company_name" placeholder="company name" required>
+            <input type="text" name="job_title" placeholder="job title" required>
+            <select name="experience_level" id="experience_level" class="level">
+                <option value="experience level" id="">experience level</option>
+            </select>
+            <textarea name="comment" id="comment" placeholder="comment"></textarea>
         </div>
+
+        <button type="submit" id="submit">submit</button>
     </form>
 
     
 
     
     <script src="./js/menu.js"></script>
+    <script src="./js/form.js"></script>
 </body>
 
 </html>

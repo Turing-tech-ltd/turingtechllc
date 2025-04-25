@@ -18,6 +18,7 @@
     /* fonts */
     --poppins: "Poppins", sans-serif;
     --roboto: "Roboto", sans-serif;
+    --form-input: #e7e7e7;
   }
   
   body{
@@ -74,6 +75,10 @@
     font-size: 1rem;
     line-height: 1.6;
     color: var(--white-color);
+  }
+
+  button{
+    cursor: pointer;
   }
   
   /* .scroll__top{
