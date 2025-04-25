@@ -83,7 +83,7 @@
 
     </div>
 
-    <form action="" class="container" id="form">
+    <form action="/submit" method="post" class="container" id="form">
         <div class="form_header">
             <h2>Let's get started</h2>
             <button id="close_btn_form"><i class="fa-solid fa-xmark"></i></button>
@@ -94,10 +94,10 @@
                 <input type="text" name="first_name" placeholder="first name" required>
                 <input type="text" name="last_name" placeholder="last name" required>
             </div>
-            <input type="email" name="email" placeholder="email" required>
+            <input type="email" class="email" name="email" placeholder="email" required>
             <input type="text" name="company_name" placeholder="company name" required>
             <input type="text" name="job_title" placeholder="job title" required>
-            <select name="experience_level" id="experience_level" class="level">
+            <select name="experience_level" id="exp_level" class="level">
                 <option value="experience level" id="">experience level</option>
             </select>
             <textarea name="comment" id="comment" placeholder="comment"></textarea>
@@ -111,6 +111,7 @@
     
     <script src="./js/menu.js"></script>
     <script src="./js/form.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>

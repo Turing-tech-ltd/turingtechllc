@@ -111,6 +111,10 @@ form > button {
     font-weight: 600;
 }
 
+.entry .email {
+    text-transform: lowercase;
+}
+
 @media (min-width: 600px){
     .full_name_form{
         flex-direction: row;
