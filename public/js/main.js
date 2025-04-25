@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 const dropdown = document.getElementById(dropdownId);
                 data.forEach((item) => {
                     const option = document.createElement('option');
-                    option.value = item.id; // Use `id` as the value
-                    option.textContent = item[tableTitle]; // Use the specified property for display text
+                    option.value = item.id;
+                    option.textContent = item[tableTitle]; 
                     dropdown.appendChild(option);
                 });
             })
