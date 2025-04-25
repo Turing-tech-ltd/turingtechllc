@@ -10,4 +10,4 @@ getStartedBtn.addEventListener("click", (e) => {
 closeFormBtn.addEventListener("click", (e) => {
     e.preventDefault();
     formContainer.style.display = "none";
-})
+});

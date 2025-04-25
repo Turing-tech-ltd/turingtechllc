@@ -90,12 +90,14 @@
         </div>
 
         <div class="entry">
-            <div class="full_name_form">
+            <div class="horizontal">
                 <input type="text" name="first_name" placeholder="first name" required>
                 <input type="text" name="last_name" placeholder="last name" required>
             </div>
-            <input type="email" class="email" name="email" placeholder="email" required>
-            <input type="text" name="company_name" placeholder="company name" required>
+            <div class="horizontal">
+                <input type="email" class="email" name="email" placeholder="email" required>
+                <input type="text" name="company_name" placeholder="company name" required>
+            </div>
             <input type="text" name="job_title" placeholder="job title" required>
             <select name="experience_level" id="exp_level" class="level">
                 <option value="experience level" id="">experience level</option>
@@ -111,7 +113,7 @@
     
     <script src="./js/menu.js"></script>
     <script src="./js/form.js"></script>
-    <script src="./js/main.js"></script>
+    <!-- <script src="./js/main.js"></script> -->
 </body>
 
 </html>
