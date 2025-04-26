@@ -173,6 +173,41 @@
         <button type="submit" id="submit">submit</button>
     </form>
 
+    <form action="/remote-form" method="post" class="container" id="remote-form" >
+        <div class="form_header">
+            <h2>Let's get started</h2>
+            <button class="close_btn_form"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <div class="entry">
+            <div class="horizontal">
+                <input type="text" name="first_name" placeholder="first name" required>
+                <input type="text" name="last_name" placeholder="last name" required>
+            </div>
+            <div class="horizontal">
+                <input type="email" class="email" name="email" placeholder="email" required>
+                <input type="text" name="linkedin_profile" placeholder="Linkedin profile" required class="linkedin">
+            </div>
+            <div class="horizontal">
+                <select name="language_id" id="language" class="level" required>
+                    <option value="Language" id="">Language</option>
+                </select>
+
+                <select name="proficiency_id" id="proficiency" class="level" required>
+                    <option value="proficiency level" id="">Language Proficiency Level</option>
+                </select>
+            </div>
+
+            <div class="">
+                <select name="skills_id" id="skills" class="level" required>
+                    <option value="Skills" id="">Skills</option>
+                </select>
+            </div>
+        </div>
+
+        <button type="submit" id="submit">submit</button>
+    </form>
+
 
     
 

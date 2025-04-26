@@ -4,7 +4,7 @@ const companyFormContainer = document.getElementById("company-form");
 const trainingFormContainer = document.getElementById("training-form");
 const innerHeroContainer = document.getElementById("hero-inner");
 const companyBtn = document.getElementById("business");
-// const trainingFormCloseBtn = document.getElementById("close_btn_training_form");
+const remoteFormContainer = document.getElementById("remote-form");
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
                 <div>
                     <input type="radio" name="path" id="placement" value="placement">
-                    <label for="placement">Are you looking for placement</label>
+                    <label for="placement">Are you looking for remote work?</label>
                 </div>
                 <div>
                     <input type="radio" name="path" id="company" value="company">
@@ -53,6 +53,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 companyFormContainer.style.display = "flex";
             } else if (e.target.id === "training") {
                 trainingFormContainer.style.display = "flex";
+            } else if (e.target.id === "placement") {
+                remoteFormContainer.style.display = "flex";
             }
         }
     });
@@ -63,6 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
             e.preventDefault();
             companyFormContainer.style.display = "none";
             trainingFormContainer.style.display = "none";
+            remoteFormContainer.style.display = "none";
         })
     })
 

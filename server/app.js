@@ -126,8 +126,41 @@ app.get('/level', async (req, res) => {
     }
 });
 
+// Fetch language
+app.get('/language', async (req, res) => {
+    try {
+        const result = await client.query('SELECT id, language FROM preferred_language');
+        res.json(result.rows);
+    } catch (err) {
+        console.error('Error fetching referral sources:', err);
+        res.status(500).json({ error: 'Server error' });
+    }
+});
 
-// Submission of forms
+// Fetch proficiency
+app.get('/proficiency', async (req, res) => {
+    try {
+        const result = await client.query('SELECT id, proficiency_level FROM proficiency_level');
+        res.json(result.rows);
+    } catch (err) {
+        console.error('Error fetching referral sources:', err);
+        res.status(500).json({ error: 'Server error' });
+    }
+});
+
+// Fetch skills
+app.get('/techskills', async (req, res) => {
+    try {
+        const result = await client.query('SELECT id, skill FROM job_skill');
+        res.json(result.rows);
+    } catch (err) {
+        console.error('Error fetching referral sources:', err);
+        res.status(500).json({ error: 'Server error' });
+    }
+});
+
+
+// Submission of company forms
 app.post('/company-form', async (req, res) => {
     try {
         // Extract form data object from the request body
@@ -216,6 +249,50 @@ app.post('/training-form', async (req, res) => {
             referral_source_id,
             user_type_id,
             comments
+        ];
+
+        // Execute the query
+        await client.query(query, values);
+
+        // Send success response
+        res.sendFile(path.join(__dirname, "../public/submit.html"));
+    } catch (err) {
+        console.error('Error submitting form:', err);
+        res.status(500).json({ error: 'Server error while submitting the form' });
+    }
+});
+
+// Submission of remote placement form
+app.post('/remote-form', async (req, res) => {
+    try {
+        // Extract form data object from the request body
+        const {
+            first_name,
+            last_name,
+            email,
+            language_id,
+            proficiency_id,
+            skills_id,
+            linkedin_profile
+        } = req.body;
+
+        // SQL query to insert data into the placement table
+        const query = `
+            INSERT INTO remote_test 
+                (first_name, last_name, email, language_id, proficiency_id, skills_id, linkedin_profile)
+            VALUES 
+                ($1, $2, $3, $4, $5, $6, $7)
+        `;
+
+        // Parameterized query values
+        const values = [
+            first_name,
+            last_name,
+            email,
+            language_id,
+            proficiency_id,
+            skills_id,
+            linkedin_profile
         ];
 
         // Execute the query

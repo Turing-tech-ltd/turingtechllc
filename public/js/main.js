@@ -31,4 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     populateDropdown('/program', 'program', 'programs'); // For program
     populateDropdown('/referral', 'referral', 'referral_source'); // For referral
     populateDropdown('/level', 'user-type', 'user_type'); // For referral
+    populateDropdown('/language', 'language', 'language'); // For language
+    populateDropdown('/proficiency', 'proficiency', 'proficiency_level'); // For language
+    populateDropdown('/techskills', 'skills', 'skill'); // For language
 });
