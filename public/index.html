@@ -83,10 +83,10 @@
 
     </div>
 
-    <form action="/submit" method="post" class="container" id="form">
+    <form action="/company-form" method="post" class="container" id="company-form">
         <div class="form_header">
             <h2>Let's get started</h2>
-            <button id="close_btn_form"><i class="fa-solid fa-xmark"></i></button>
+            <button class="close_btn_form"><i class="fa-solid fa-xmark"></i></button>
         </div>
 
         <div class="entry">
@@ -119,6 +119,60 @@
 
         <button type="submit" id="submit">submit</button>
     </form>
+
+    <form action="/training-form" method="post" class="container" id="training-form" >
+        <div class="form_header">
+            <h2>Let's get started</h2>
+            <button class="close_btn_form"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <div class="entry">
+            <div class="horizontal">
+                <input type="text" name="first_name" placeholder="first name" required>
+                <input type="text" name="last_name" placeholder="last name" required>
+            </div>
+            <div class="horizontal">
+                <input type="email" class="email" name="email" placeholder="email" required>
+                <input type="tel" name="phone_number" placeholder="Phone number" required>
+            </div>
+            <div class="horizontal">
+                <select name="qualification_id" id="qualification" class="level" required>
+                    <option value="Highest Educational qualification" id="">Highest educational qualification</option>
+                </select>
+
+                <select name="country_id" id="country" class="level" required>
+                    <option value="Country of Residence" id="">Country of residence</option>
+                </select>
+            </div>
+
+            <div class="horizontal">
+                <select name="program_id" id="program" class="level" required>
+                    <option value="Select a program" id="">Select a program</option>
+                </select>
+
+                <select name="referral_source_id" id="referral" class="level" required>
+                    <option value="How did you hear about us" id="">How did you hear about us</option>
+                </select>
+            </div>
+
+            <div class="horizontal">
+                <select name="user_type_id" id="user-type" class="level" required>
+                    <option value="Which option best describes you?" id="">Which option best describes you?</option>
+                </select>
+                <textarea name="comments" id="comment" placeholder="Ask a question or leave a comment" class=""></textarea>
+            </div>
+            
+            <div class="service">
+                <input type="checkbox" required>
+                <label for="terms of service">
+                    I agree to Turing Tech Ltd terms of service
+                </label>
+            </div>
+        </div>
+
+        <button type="submit" id="submit">submit</button>
+    </form>
+
 
     
 

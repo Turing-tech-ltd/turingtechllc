@@ -26,4 +26,9 @@ document.addEventListener('DOMContentLoaded', () => {
     populateDropdown('/experience', 'exp_level', 'experience_level'); // For placement
     populateDropdown('/skills', 'skills_req', 'skills_required'); // For skills required
     populateDropdown('/duration', 'duration', 'duration'); // For duration
+    populateDropdown('/qualification', 'qualification', 'qualification'); // For educational qualification
+    populateDropdown('/country', 'country', 'country_name'); // For country
+    populateDropdown('/program', 'program', 'programs'); // For program
+    populateDropdown('/referral', 'referral', 'referral_source'); // For referral
+    populateDropdown('/level', 'user-type', 'user_type'); // For referral
 });

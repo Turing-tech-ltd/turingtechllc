@@ -70,6 +70,25 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    background-color: var(--white-color);
+    width: 100%;
+    max-width: 30rem;
+    padding: 2rem;
+    border-radius: 10px;
+    font-family: var(--poppins);
+    text-transform: capitalize;
+}
+
+.path_button > div{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.path_button input[type="radio"]{
+    transform: scale(1.02);
+    cursor: pointer;
+    margin-right: 0.5rem;
 }
 
 @media (min-width: 430px){
@@ -82,7 +101,8 @@
 
 @media (min-width: 600px){
     .path_button{
-        flex-direction: row;
+        /* flex-direction: row; */
+        scale: 1.03;
     }
 }
 
@@ -104,5 +124,9 @@
 
     .hero-inner button{
         font-size: 1.3rem;
+    }
+
+    .path_button{
+        font-size: 1.4rem;
     }
 }

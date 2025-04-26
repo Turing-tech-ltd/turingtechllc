@@ -71,9 +71,64 @@ app.get('/duration', async (req, res) => {
     }
 });
 
+// Fetch duration
+app.get('/qualification', async (req, res) => {
+    try {
+        const result = await client.query('SELECT id, qualification FROM qualification');
+        res.json(result.rows);
+    } catch (err) {
+        console.error('Error fetching referral sources:', err);
+        res.status(500).json({ error: 'Server error' });
+    }
+});
+
+// Fetch country
+app.get('/country', async (req, res) => {
+    try {
+        const result = await client.query('SELECT id, country_name FROM country');
+        res.json(result.rows);
+    } catch (err) {
+        console.error('Error fetching referral sources:', err);
+        res.status(500).json({ error: 'Server error' });
+    }
+});
+
+// Fetch programs
+app.get('/program', async (req, res) => {
+    try {
+        const result = await client.query('SELECT id, programs FROM program');
+        res.json(result.rows);
+    } catch (err) {
+        console.error('Error fetching referral sources:', err);
+        res.status(500).json({ error: 'Server error' });
+    }
+});
+
+// Fetch referral_source
+app.get('/referral', async (req, res) => {
+    try {
+        const result = await client.query('SELECT id, referral_source FROM referral_source');
+        res.json(result.rows);
+    } catch (err) {
+        console.error('Error fetching referral sources:', err);
+        res.status(500).json({ error: 'Server error' });
+    }
+});
+
+// Fetch user_type
+app.get('/level', async (req, res) => {
+    try {
+        const result = await client.query('SELECT id, user_type FROM user_type');
+        res.json(result.rows);
+    } catch (err) {
+        console.error('Error fetching referral sources:', err);
+        res.status(500).json({ error: 'Server error' });
+    }
+});
+
 
 // Submission of forms
-app.post('/submit', async (req, res) => {
+app.post('/company-form', async (req, res) => {
     try {
         // Extract form data object from the request body
         const {
@@ -124,8 +179,58 @@ app.post('/submit', async (req, res) => {
     }
 });
 
+// Submission of training form
+app.post('/training-form', async (req, res) => {
+    try {
+        // Extract form data object from the request body
+        const {
+            first_name,
+            last_name,
+            email,
+            phone_number,
+            qualification_id,
+            country_id,
+            program_id,
+            referral_source_id,
+            user_type_id,
+            comments
+        } = req.body;
+
+        // SQL query to insert data into the placement table
+        const query = `
+            INSERT INTO training_application_test 
+                (first_name, last_name, email, phone_number, qualification_id, country_id, program_id, referral_source_id, user_type_id, comments)
+            VALUES 
+                ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+        `;
+
+        // Parameterized query values
+        const values = [
+            first_name,
+            last_name,
+            email,
+            phone_number,
+            qualification_id,
+            country_id,
+            program_id,
+            referral_source_id,
+            user_type_id,
+            comments
+        ];
+
+        // Execute the query
+        await client.query(query, values);
+
+        // Send success response
+        res.sendFile(path.join(__dirname, "../public/submit.html"));
+    } catch (err) {
+        console.error('Error submitting form:', err);
+        res.status(500).json({ error: 'Server error while submitting the form' });
+    }
+});
+
 
 
 app.listen(`${port}`, () => {
     console.log(`server is ready for request at ${port}`);
-})
+});
