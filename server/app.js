@@ -41,7 +41,29 @@ app.get('/', (req, res) => {
 // Fetch experience level
 app.get('/experience', async (req, res) => {
     try {
-        const result = await client.query('SELECT id, experience_level FROM test_level');
+        const result = await client.query('SELECT id, experience_level FROM experience_level');
+        res.json(result.rows);
+    } catch (err) {
+        console.error('Error fetching referral sources:', err);
+        res.status(500).json({ error: 'Server error' });
+    }
+});
+
+// Fetch skills required
+app.get('/skills', async (req, res) => {
+    try {
+        const result = await client.query('SELECT id, skills_required FROM skills');
+        res.json(result.rows);
+    } catch (err) {
+        console.error('Error fetching referral sources:', err);
+        res.status(500).json({ error: 'Server error' });
+    }
+});
+
+// Fetch duration
+app.get('/duration', async (req, res) => {
+    try {
+        const result = await client.query('SELECT id, duration FROM duration');
         res.json(result.rows);
     } catch (err) {
         console.error('Error fetching referral sources:', err);
@@ -60,6 +82,10 @@ app.post('/submit', async (req, res) => {
             email,
             company_name,
             job_title,
+            skills_required,
+            other_skills,
+            duration,
+            other_duration,
             experience_level,
             comment
         } = req.body;
@@ -67,9 +93,9 @@ app.post('/submit', async (req, res) => {
         // SQL query to insert data into the placement table
         const query = `
             INSERT INTO placement_test 
-                (first_name, last_name, email, company_name, job_title, experience_level, comment)
+                (first_name, last_name, email, company_name, job_title, skills_required, other_skills, duration, other_duration, experience_level, comment)
             VALUES 
-                ($1, $2, $3, $4, $5, $6, $7)
+                ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)
         `;
 
         // Parameterized query values
@@ -79,6 +105,10 @@ app.post('/submit', async (req, res) => {
             email,
             company_name,
             job_title,
+            skills_required,
+            other_skills,
+            duration,
+            other_duration,
             experience_level,
             comment
         ];

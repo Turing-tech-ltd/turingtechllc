@@ -72,7 +72,7 @@
 
         <!-- Hero -->
         <section class="hero">
-            <div class="hero-inner container">
+            <div class="hero-inner container" id="hero-inner">
                 <h1> 
                     We train the workforce of the future! And match them to jobs.
                 </h1>
@@ -99,7 +99,19 @@
                 <input type="text" name="company_name" placeholder="company name" required>
             </div>
             <input type="text" name="job_title" placeholder="job title" required>
-            <select name="experience_level" id="exp_level" class="level">
+            <div class="multi_option">
+                <select name="skills_required" id="skills_req" class="level" required>
+                    <option value="Skills Required" id="">Skills Required</option>
+                </select>
+                <textarea name="other_skills" id="other_skills" placeholder="Specify" class="skill_req"></textarea>
+            </div>
+            <div class="multi_option">
+                <select name="duration" id="duration" class="level" required>
+                    <option value="Duration" id="">Duration</option>
+                </select>
+                <textarea name="other_duration" id="other_duration" placeholder="Specify" class="duration"></textarea>
+            </div>
+            <select name="experience_level" id="exp_level" class="level" required>
                 <option value="experience level" id="">experience level</option>
             </select>
             <textarea name="comment" id="comment" placeholder="comment"></textarea>
@@ -113,7 +125,8 @@
     
     <script src="./js/menu.js"></script>
     <script src="./js/form.js"></script>
-    <!-- <script src="./js/main.js"></script> -->
+    <script src="./js/main.js"></script>
+    <script src="./js/handleform.js"></script>
 </body>
 
 </html>

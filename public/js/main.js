@@ -24,4 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Populate the dropdowns
     populateDropdown('/experience', 'exp_level', 'experience_level'); // For placement
+    populateDropdown('/skills', 'skills_req', 'skills_required'); // For skills required
+    populateDropdown('/duration', 'duration', 'duration'); // For duration
 });
