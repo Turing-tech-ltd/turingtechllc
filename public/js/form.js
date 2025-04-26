@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
                 <div>
                     <input type="radio" name="path" id="company" value="company">
-                    <label for="companies">Companies</label>
+                    <label for="companies">Is your company in need of outsourced services?</label>
                 </div>
             </div>
         `

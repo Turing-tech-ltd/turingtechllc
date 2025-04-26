@@ -141,6 +141,7 @@ form > button {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    font-family: var(--poppins);
 }
 
 input.linkedin{
