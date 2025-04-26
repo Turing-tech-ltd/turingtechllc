@@ -4,8 +4,7 @@ import cors from "cors"
 import path from "path";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
-import pkg from 'pg';
-const { Client } = pkg;
+import { Client } from 'pg';
 
 dotenv.config();
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -65,7 +64,7 @@ app.post('/submit', async (req, res) => {
             comment
         } = req.body;
 
-        // SQL query to insert data into the turing_applications table
+        // SQL query to insert data into the placement table
         const query = `
             INSERT INTO placement_test 
                 (first_name, last_name, email, company_name, job_title, experience_level, comment)
