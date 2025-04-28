@@ -71,7 +71,18 @@ app.get('/duration', async (req, res) => {
     }
 });
 
-// Fetch duration
+// Fetch Workmode
+app.get('/workmode', async (req, res) => {
+    try {
+        const result = await client.query('SELECT id, work_mode FROM work_mode');
+        res.json(result.rows);
+    } catch (err) {
+        console.error('Error fetching referral sources:', err);
+        res.status(500).json({ error: 'Server error' });
+    }
+});
+
+// Fetch Qualification
 app.get('/qualification', async (req, res) => {
     try {
         const result = await client.query('SELECT id, qualification FROM qualification');
@@ -170,20 +181,22 @@ app.post('/company-form', async (req, res) => {
             email,
             company_name,
             job_title,
-            skills_required,
+            skills_required_id,
             other_skills,
-            duration,
+            duration_id,
             other_duration,
-            experience_level,
+            experience_level_id,
+            work_mode_id,
+            other_work_mode,
             comment
         } = req.body;
 
         // SQL query to insert data into the placement table
         const query = `
             INSERT INTO placement_test 
-                (first_name, last_name, email, company_name, job_title, skills_required, other_skills, duration, other_duration, experience_level, comment)
+                (first_name, last_name, email, company_name, job_title, skills_required_id, other_skills, duration_id, other_duration, experience_level_id, work_mode_id, other_work_mode,  comment)
             VALUES 
-                ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)
+                ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13)
         `;
 
         // Parameterized query values
@@ -193,11 +206,13 @@ app.post('/company-form', async (req, res) => {
             email,
             company_name,
             job_title,
-            skills_required,
+            skills_required_id,
             other_skills,
-            duration,
+            duration_id,
             other_duration,
-            experience_level,
+            experience_level_id,
+            work_mode_id,
+            other_work_mode,
             comment
         ];
 

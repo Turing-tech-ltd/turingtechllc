@@ -66,29 +66,52 @@
     cursor: pointer;
 }
 
-.path_button{
-    display: flex;
+.path{
+    /* display: flex; */
     flex-direction: column;
-    gap: 2rem;
     background-color: var(--white-color);
     width: 100%;
     max-width: 30rem;
-    padding: 2rem;
+    padding: 1rem;
     border-radius: 10px;
     font-family: var(--poppins);
     text-transform: capitalize;
-}
-
-.path_button > div{
-    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     align-items: center;
-    gap: 0.5rem;
+    display: none;
 }
 
-.path_button input[type="radio"]{
+.path > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.path > div > div{
+    align-self: flex-start;
+}
+
+.path input[type="radio"]{
     transform: scale(1.02);
     cursor: pointer;
     margin-right: 0.5rem;
+}
+
+.path button{
+    align-self: flex-end;
+    border: none;
+    background-color: var(--white-color);
+    padding: 0.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+.path label{
+    cursor: pointer;
 }
 
 @media (min-width: 430px){
@@ -100,7 +123,7 @@
 }
 
 @media (min-width: 600px){
-    .path_button{
+    .path input[type="radio"]{
         /* flex-direction: row; */
         scale: 1.03;
     }
@@ -126,7 +149,8 @@
         font-size: 1.3rem;
     }
 
-    .path_button{
+    .path{
         font-size: 1.4rem;
+        max-width: 40rem;
     }
 }

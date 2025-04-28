@@ -83,6 +83,25 @@
 
     </div>
 
+    <!-- Where users choose their path -->
+    <div class="path">
+        <button id="closeBtn"><i class="fa-solid fa-xmark"></i></button>
+        <div>
+            <div>
+                <input type="radio" name="path" id="training" value="training">
+                <label for="training">Are you applying to be trained</label>
+            </div>
+            <div>
+                <input type="radio" name="path" id="placement" value="placement">
+                <label for="placement">Are you looking for remote work?</label>
+            </div>
+            <div>
+                <input type="radio" name="path" id="company" value="company">
+                <label for="company">Is your company in need of outsourced services?</label>
+            </div>
+        </div>
+    </div>
+
     <form action="/company-form" method="post" class="container" id="company-form">
         <div class="form_header">
             <h2>Let's get started</h2>
@@ -100,21 +119,29 @@
             </div>
             <input type="text" name="job_title" placeholder="job title" required>
             <div class="multi_option">
-                <select name="skills_required" id="skills_req" class="level" required>
+                <select name="skills_required_id" id="skills_req" class="level" required>
                     <option value="Skills Required" id="">Skills Required</option>
                 </select>
                 <textarea name="other_skills" id="other_skills" placeholder="Specify" class="skill_req"></textarea>
             </div>
-            <div class="multi_option">
-                <select name="duration" id="duration" class="level" required>
+            <div class="multi_option" id="duration_container">
+                <select name="duration_id" id="duration" class="level" required>
                     <option value="Duration" id="">Duration</option>
                 </select>
                 <textarea name="other_duration" id="other_duration" placeholder="Specify" class="duration"></textarea>
             </div>
-            <select name="experience_level" id="exp_level" class="level" required>
-                <option value="experience level" id="">experience level</option>
-            </select>
-            <textarea name="comment" id="comment" placeholder="comment"></textarea>
+            <div id="experience_container">
+                <select name="experience_level_id" id="exp_level" class="level" required>
+                    <option value="experience level" id="">experience level</option>
+                </select>
+            </div>
+            <div class="multi_option" id="work_mode_container">
+                <select name="work_mode_id" id="work_mode" class="level" required>
+                    <option value="Work Mode" id="">Work Mode</option>
+                </select>
+                <textarea name="other_work_mode" id="other_work_mode" placeholder="Specify" class="workmode"></textarea>
+            </div>
+            <textarea name="comment" id="comment" placeholder="Additional comment"></textarea>
         </div>
 
         <button type="submit" id="submit">submit</button>
@@ -207,6 +234,10 @@
 
         <button type="submit" id="submit">submit</button>
     </form>
+
+    <p>
+        lorem1000
+    </p>
 
 
     

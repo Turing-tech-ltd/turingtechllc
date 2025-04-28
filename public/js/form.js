@@ -5,48 +5,25 @@ const trainingFormContainer = document.getElementById("training-form");
 const innerHeroContainer = document.getElementById("hero-inner");
 const companyBtn = document.getElementById("business");
 const remoteFormContainer = document.getElementById("remote-form");
+const options = document.querySelector(".path");
+const closeOptionBtn = document.getElementById("closeBtn");
+const contentWrapper = document.querySelector(".top_wrapper");
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    /* getStartedBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        formContainer.style.display = "flex";
-    }); */
 
     getStartedBtn.addEventListener("click", (e) => {
         e.preventDefault();
-        /* innerHeroContainer.innerHTML = `
-            <h2>Choose your path</h2>
-            <div class="path_button">
-                <button id="training">training</button>
-                <button id="remote">remote work</button>
-                <button id="company">company</button>
-            </div>
-        ` */
-
-        innerHeroContainer.innerHTML = `
-            <div class="path_button">
-                <div>
-                    <input type="radio" name="path" id="training" value="training">
-                    <label for="training">Are you applying to be trained</label>
-                </div>
-                <div>
-                    <input type="radio" name="path" id="placement" value="placement">
-                    <label for="placement">Are you looking for remote work?</label>
-                </div>
-                <div>
-                    <input type="radio" name="path" id="company" value="company">
-                    <label for="companies">Is your company in need of outsourced services?</label>
-                </div>
-            </div>
-        `
+        options.style.display = "flex";
+        innerHeroContainer.style.display = "none";
 
     // Use the 'change' event for radio buttons
-    innerHeroContainer.addEventListener("change", (e) => {
+    options.addEventListener("change", (e) => {
         if (e.target.name === "path") {
             // Hide all forms first
             companyFormContainer.style.display = "none";
             trainingFormContainer.style.display = "none";
+            remoteFormContainer.style.display = "none";
 
             // Show the appropriate form based on the selected radio button
             if (e.target.id === "company") {
@@ -56,9 +33,18 @@ document.addEventListener("DOMContentLoaded", () => {
             } else if (e.target.id === "placement") {
                 remoteFormContainer.style.display = "flex";
             }
+
+            contentWrapper.classList.add("blurred"); // Add blur effect
         }
     });
 });
+
+    closeOptionBtn.addEventListener("click", () => {
+        if (options){
+            options.style.display = "none";
+            innerHeroContainer.style.display = "flex";
+        }  
+    })
 
     closeFormBtn.forEach((btn) => {
         btn.addEventListener("click", (e) => {
@@ -66,6 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
             companyFormContainer.style.display = "none";
             trainingFormContainer.style.display = "none";
             remoteFormContainer.style.display = "none";
+            contentWrapper.classList.remove("blurred"); // Remove blur effect
         })
     })
 
