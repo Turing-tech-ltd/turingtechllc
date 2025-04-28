@@ -124,16 +124,18 @@
                 </select>
                 <textarea name="other_skills" id="other_skills" placeholder="Specify" class="skill_req"></textarea>
             </div>
-            <div class="multi_option">
+            <div class="multi_option" id="duration_container">
                 <select name="duration" id="duration" class="level" required>
                     <option value="Duration" id="">Duration</option>
                 </select>
                 <textarea name="other_duration" id="other_duration" placeholder="Specify" class="duration"></textarea>
             </div>
-            <select name="experience_level" id="exp_level" class="level" required>
-                <option value="experience level" id="">experience level</option>
-            </select>
-            <textarea name="comment" id="comment" placeholder="comment"></textarea>
+            <div id="experience_container">
+                <select name="experience_level" id="exp_level" class="level" required>
+                    <option value="experience level" id="">experience level</option>
+                </select>
+            </div>
+            <textarea name="comment" id="comment" placeholder="Additional comment"></textarea>
         </div>
 
         <button type="submit" id="submit">submit</button>
