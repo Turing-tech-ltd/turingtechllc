@@ -119,21 +119,27 @@
             </div>
             <input type="text" name="job_title" placeholder="job title" required>
             <div class="multi_option">
-                <select name="skills_required" id="skills_req" class="level" required>
+                <select name="skills_required_id" id="skills_req" class="level" required>
                     <option value="Skills Required" id="">Skills Required</option>
                 </select>
                 <textarea name="other_skills" id="other_skills" placeholder="Specify" class="skill_req"></textarea>
             </div>
             <div class="multi_option" id="duration_container">
-                <select name="duration" id="duration" class="level" required>
+                <select name="duration_id" id="duration" class="level" required>
                     <option value="Duration" id="">Duration</option>
                 </select>
                 <textarea name="other_duration" id="other_duration" placeholder="Specify" class="duration"></textarea>
             </div>
             <div id="experience_container">
-                <select name="experience_level" id="exp_level" class="level" required>
+                <select name="experience_level_id" id="exp_level" class="level" required>
                     <option value="experience level" id="">experience level</option>
                 </select>
+            </div>
+            <div class="multi_option" id="work_mode_container">
+                <select name="work_mode_id" id="work_mode" class="level" required>
+                    <option value="Work Mode" id="">Work Mode</option>
+                </select>
+                <textarea name="other_work_mode" id="other_work_mode" placeholder="Specify" class="workmode"></textarea>
             </div>
             <textarea name="comment" id="comment" placeholder="Additional comment"></textarea>
         </div>

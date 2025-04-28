@@ -4,6 +4,8 @@ const skillTextArea = document.querySelector(".skill_req");
 const durationTextArea = document.querySelector(".duration");
 const durationContainer = document.getElementById("duration_container");
 const experienceContainer = document.getElementById("experience_container");
+const workModeDropDown = document.getElementById("work_mode");
+const workModeTextArea = document.querySelector(".workmode");
 
 
 
@@ -11,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Show duration container when a skill is selected
     skillsDropDown.addEventListener("change", (e) => {
         if (e.target.value) {
-            durationContainer.style.display = "block"; // Show duration container
+            durationContainer.style.display = "flex"; // Show duration container
         } else {
             durationContainer.style.display = "none"; // Hide duration container
             experienceContainer.style.display = "none"; // Reset experience container
@@ -40,4 +42,12 @@ document.addEventListener("DOMContentLoaded", () => {
             durationTextArea.style.display = "none";
         }
     });
+
+    workModeDropDown.addEventListener("change", (e) => {
+        if (e.target.value === "4"){
+            workModeTextArea.style.display = "block";
+        } else {
+            workModeTextArea.style.display = "none";
+        }
+    })
 });

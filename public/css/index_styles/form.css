@@ -11,6 +11,15 @@
     --form-input: #e7e7e7;
   }
 
+.top_wrapper{
+    transition: filter 0.3s ease;
+}
+
+.top_wrapper.blurred {
+    filter: blur(3px); /* Apply blur effect */
+    pointer-events: none; /* Prevent interaction with blurred content */
+}
+
 form{
     background-color: var(--lite-black);
     color: var(--white-color);
@@ -24,7 +33,8 @@ form{
     align-items: center;
     gap: 1rem;
     padding: 1rem;
-    min-height: calc(100vh - 5rem);
+    /* min-height: calc(100vh - 5rem); */
+    min-height: fit-content;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     box-shadow: 0px 0px 5px 3px rgba(255, 255, 255, 0.08);
@@ -118,7 +128,8 @@ form{
 }
 
 .skill_req,
-.duration{
+.duration,
+.workmode{
     display: none;
 }
 
@@ -150,10 +161,10 @@ input.linkedin{
     text-transform: lowercase;
 }
 
-#duration_container,
+/* #duration_container,
 #experience_container{
     display: none;
-}
+} */
 
 @media (min-width: 768px){
     form{

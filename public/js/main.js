@@ -34,4 +34,5 @@ document.addEventListener('DOMContentLoaded', () => {
     populateDropdown('/language', 'language', 'language'); // For language
     populateDropdown('/proficiency', 'proficiency', 'proficiency_level'); // For language
     populateDropdown('/techskills', 'skills', 'skill'); // For language
+    populateDropdown('/workmode', 'work_mode', 'work_mode'); // For language
 });

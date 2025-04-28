@@ -7,8 +7,7 @@ const companyBtn = document.getElementById("business");
 const remoteFormContainer = document.getElementById("remote-form");
 const options = document.querySelector(".path");
 const closeOptionBtn = document.getElementById("closeBtn");
-// const form = document.querySelectorAll("form");
-// const heroWrapper = document.getElementById("top_wrapper");
+const contentWrapper = document.querySelector(".top_wrapper");
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -29,18 +28,13 @@ document.addEventListener("DOMContentLoaded", () => {
             // Show the appropriate form based on the selected radio button
             if (e.target.id === "company") {
                 companyFormContainer.style.display = "flex";
-                trainingFormContainer.style.display = "none";
-                remoteFormContainer.style.display = "none";
-
             } else if (e.target.id === "training") {
                 trainingFormContainer.style.display = "flex";
-                companyFormContainer.style.display = "none";
-                remoteFormContainer.style.display = "none";
             } else if (e.target.id === "placement") {
                 remoteFormContainer.style.display = "flex";
-                companyFormContainer.style.display = "none";
-                trainingFormContainer.style.display = "none";
             }
+
+            contentWrapper.classList.add("blurred"); // Add blur effect
         }
     });
 });
@@ -58,6 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
             companyFormContainer.style.display = "none";
             trainingFormContainer.style.display = "none";
             remoteFormContainer.style.display = "none";
+            contentWrapper.classList.remove("blurred"); // Remove blur effect
         })
     })
 
