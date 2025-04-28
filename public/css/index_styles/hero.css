@@ -38,9 +38,11 @@
     flex-direction: column;
     align-items: center;
     gap: 2rem;
+    margin-top: 7rem;  /* move hero down*/
 }
 
-.hero h1{
+.hero h1,
+.hero h2{
     font-size: 1.3rem;
     line-height: 2.5rem;
     color: white;
@@ -64,28 +66,67 @@
     cursor: pointer;
 }
 
+.path_button{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: var(--white-color);
+    width: 100%;
+    max-width: 30rem;
+    padding: 2rem;
+    border-radius: 10px;
+    font-family: var(--poppins);
+    text-transform: capitalize;
+}
+
+.path_button > div{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.path_button input[type="radio"]{
+    transform: scale(1.02);
+    cursor: pointer;
+    margin-right: 0.5rem;
+}
+
 @media (min-width: 430px){
-    .hero h1{
+    .hero h1,
+    .hero h2{
         font-size: 1.7rem;
         line-height: 3rem;
     }
 }
 
+@media (min-width: 600px){
+    .path_button{
+        /* flex-direction: row; */
+        scale: 1.03;
+    }
+}
+
 @media (min-width: 768px){
-    .hero h1{
+    .hero h1,
+    .hero h2{
         font-size: 2rem;
         max-width: 30rem;
     }
 }
 
 @media (min-width: 960px){
-    .hero h1{
+    .hero h1,
+    .hero h2{
         font-size: 3.5rem;
-        max-width: 80%;
+        max-width: 90%;
         line-height: 4.5rem;
     }
 
     .hero-inner button{
         font-size: 1.3rem;
+    }
+
+    .path_button{
+        font-size: 1.4rem;
     }
 }

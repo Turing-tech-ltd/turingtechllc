@@ -41,7 +41,7 @@
             <figure>
                 <img src="./images/turing logo.jpg" alt="logo" loading="lazy">
     
-                <figcaption>TuringTech LLC</figcaption>
+                <figcaption>TuringTech</figcaption>
             </figure>
     
             <div>
@@ -72,33 +72,150 @@
 
         <!-- Hero -->
         <section class="hero">
-            <div class="hero-inner container">
+            <div class="hero-inner container" id="hero-inner">
                 <h1> 
-                    We train the workforce of the future! And put them to work today.
+                    We train the workforce of the future! And match them to jobs.
                 </h1>
     
-                <button>Get Started Today</button>
+                <button id="get_started">Get Started Today</button>
             </div>
         </section>
 
     </div>
 
-    <form action="" class="container">
+    <form action="/company-form" method="post" class="container" id="company-form">
         <div class="form_header">
             <h2>Let's get started</h2>
-            <button id="close_btn_form"><i class="fa-solid fa-xmark"></i></button>
+            <button class="close_btn_form"><i class="fa-solid fa-xmark"></i></button>
         </div>
 
-        <div class="form_fn">
-            <label for="first_name">first name</label>
-            <input type="text" name="first_name" placeholder="first name" required>
+        <div class="entry">
+            <div class="horizontal">
+                <input type="text" name="first_name" placeholder="first name" required>
+                <input type="text" name="last_name" placeholder="last name" required>
+            </div>
+            <div class="horizontal">
+                <input type="email" class="email" name="email" placeholder="email" required>
+                <input type="text" name="company_name" placeholder="company name" required>
+            </div>
+            <input type="text" name="job_title" placeholder="job title" required>
+            <div class="multi_option">
+                <select name="skills_required" id="skills_req" class="level" required>
+                    <option value="Skills Required" id="">Skills Required</option>
+                </select>
+                <textarea name="other_skills" id="other_skills" placeholder="Specify" class="skill_req"></textarea>
+            </div>
+            <div class="multi_option">
+                <select name="duration" id="duration" class="level" required>
+                    <option value="Duration" id="">Duration</option>
+                </select>
+                <textarea name="other_duration" id="other_duration" placeholder="Specify" class="duration"></textarea>
+            </div>
+            <select name="experience_level" id="exp_level" class="level" required>
+                <option value="experience level" id="">experience level</option>
+            </select>
+            <textarea name="comment" id="comment" placeholder="comment"></textarea>
         </div>
+
+        <button type="submit" id="submit">submit</button>
     </form>
+
+    <form action="/training-form" method="post" class="container" id="training-form" >
+        <div class="form_header">
+            <h2>Let's get started</h2>
+            <button class="close_btn_form"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <div class="entry">
+            <div class="horizontal">
+                <input type="text" name="first_name" placeholder="first name" required>
+                <input type="text" name="last_name" placeholder="last name" required>
+            </div>
+            <div class="horizontal">
+                <input type="email" class="email" name="email" placeholder="email" required>
+                <input type="tel" name="phone_number" placeholder="Phone number" required>
+            </div>
+            <div class="horizontal">
+                <select name="qualification_id" id="qualification" class="level" required>
+                    <option value="Highest Educational qualification" id="">Highest educational qualification</option>
+                </select>
+
+                <select name="country_id" id="country" class="level" required>
+                    <option value="Country of Residence" id="">Country of residence</option>
+                </select>
+            </div>
+
+            <div class="horizontal">
+                <select name="program_id" id="program" class="level" required>
+                    <option value="Select a program" id="">Select a program</option>
+                </select>
+
+                <select name="referral_source_id" id="referral" class="level" required>
+                    <option value="How did you hear about us" id="">How did you hear about us</option>
+                </select>
+            </div>
+
+            <div class="horizontal">
+                <select name="user_type_id" id="user-type" class="level" required>
+                    <option value="Which option best describes you?" id="">Which option best describes you?</option>
+                </select>
+                <textarea name="comments" id="comment" placeholder="Ask a question or leave a comment" class=""></textarea>
+            </div>
+            
+            <div class="service">
+                <input type="checkbox" required>
+                <label for="terms of service">
+                    I agree to Turing Tech's terms of service
+                </label>
+            </div>
+        </div>
+
+        <button type="submit" id="submit">submit</button>
+    </form>
+
+    <form action="/remote-form" method="post" class="container" id="remote-form" >
+        <div class="form_header">
+            <h2>Let's get started</h2>
+            <button class="close_btn_form"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <div class="entry">
+            <div class="horizontal">
+                <input type="text" name="first_name" placeholder="first name" required>
+                <input type="text" name="last_name" placeholder="last name" required>
+            </div>
+            <div class="horizontal">
+                <input type="email" class="email" name="email" placeholder="email" required>
+                <input type="text" name="linkedin_profile" placeholder="Linkedin profile" required class="linkedin">
+            </div>
+            <div class="horizontal">
+                <select name="language_id" id="language" class="level" required>
+                    <option value="Language" id="">Language</option>
+                </select>
+
+                <select name="proficiency_id" id="proficiency" class="level" required>
+                    <option value="proficiency level" id="">Language Proficiency Level</option>
+                </select>
+            </div>
+
+            <div class="">
+                <select name="skills_id" id="skills" class="level" required>
+                    <option value="Skills" id="">Skills</option>
+                </select>
+            </div>
+        </div>
+
+        <button type="submit" id="submit">submit</button>
+    </form>
+
 
     
 
     
     <script src="./js/menu.js"></script>
+    <script src="./js/form.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/handleform.js"></script>
 </body>
 
 </html>
