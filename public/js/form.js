@@ -5,6 +5,8 @@ const trainingFormContainer = document.getElementById("training-form");
 const innerHeroContainer = document.getElementById("hero-inner");
 const companyBtn = document.getElementById("business");
 const remoteFormContainer = document.getElementById("remote-form");
+const form = document.querySelectorAll("form");
+const heroWrapper = document.getElementById("top_wrapper");
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -12,6 +14,10 @@ document.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
         formContainer.style.display = "flex";
     }); */
+
+    if (form){
+        // heroWrapper.style.backgroundColor = "black"
+    }
 
     getStartedBtn.addEventListener("click", (e) => {
         e.preventDefault();
@@ -24,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
         ` */
 
-        innerHeroContainer.innerHTML = `
+/*         innerHeroContainer.innerHTML = `
             <div class="path_button">
                 <div>
                     <input type="radio" name="path" id="training" value="training">
@@ -40,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
             </div>
         `
-
+ */
     // Use the 'change' event for radio buttons
     innerHeroContainer.addEventListener("change", (e) => {
         if (e.target.name === "path") {
@@ -51,6 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // Show the appropriate form based on the selected radio button
             if (e.target.id === "company") {
                 companyFormContainer.style.display = "flex";
+                innerHeroContainer.innerHTML = ""
             } else if (e.target.id === "training") {
                 trainingFormContainer.style.display = "flex";
             } else if (e.target.id === "placement") {
