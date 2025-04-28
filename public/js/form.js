@@ -5,67 +5,52 @@ const trainingFormContainer = document.getElementById("training-form");
 const innerHeroContainer = document.getElementById("hero-inner");
 const companyBtn = document.getElementById("business");
 const remoteFormContainer = document.getElementById("remote-form");
-const form = document.querySelectorAll("form");
-const heroWrapper = document.getElementById("top_wrapper");
+const options = document.querySelector(".path");
+const closeOptionBtn = document.getElementById("closeBtn");
+// const form = document.querySelectorAll("form");
+// const heroWrapper = document.getElementById("top_wrapper");
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    /* getStartedBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        formContainer.style.display = "flex";
-    }); */
-
-    if (form){
-        // heroWrapper.style.backgroundColor = "black"
-    }
 
     getStartedBtn.addEventListener("click", (e) => {
         e.preventDefault();
-        /* innerHeroContainer.innerHTML = `
-            <h2>Choose your path</h2>
-            <div class="path_button">
-                <button id="training">training</button>
-                <button id="remote">remote work</button>
-                <button id="company">company</button>
-            </div>
-        ` */
+        options.style.display = "flex";
+        innerHeroContainer.style.display = "none";
 
-/*         innerHeroContainer.innerHTML = `
-            <div class="path_button">
-                <div>
-                    <input type="radio" name="path" id="training" value="training">
-                    <label for="training">Are you applying to be trained</label>
-                </div>
-                <div>
-                    <input type="radio" name="path" id="placement" value="placement">
-                    <label for="placement">Are you looking for remote work?</label>
-                </div>
-                <div>
-                    <input type="radio" name="path" id="company" value="company">
-                    <label for="companies">Is your company in need of outsourced services?</label>
-                </div>
-            </div>
-        `
- */
     // Use the 'change' event for radio buttons
-    innerHeroContainer.addEventListener("change", (e) => {
+    options.addEventListener("change", (e) => {
         if (e.target.name === "path") {
             // Hide all forms first
             companyFormContainer.style.display = "none";
             trainingFormContainer.style.display = "none";
+            remoteFormContainer.style.display = "none";
 
             // Show the appropriate form based on the selected radio button
             if (e.target.id === "company") {
                 companyFormContainer.style.display = "flex";
-                innerHeroContainer.innerHTML = ""
+                trainingFormContainer.style.display = "none";
+                remoteFormContainer.style.display = "none";
+
             } else if (e.target.id === "training") {
                 trainingFormContainer.style.display = "flex";
+                companyFormContainer.style.display = "none";
+                remoteFormContainer.style.display = "none";
             } else if (e.target.id === "placement") {
                 remoteFormContainer.style.display = "flex";
+                companyFormContainer.style.display = "none";
+                trainingFormContainer.style.display = "none";
             }
         }
     });
 });
+
+    closeOptionBtn.addEventListener("click", () => {
+        if (options){
+            options.style.display = "none";
+            innerHeroContainer.style.display = "flex";
+        }  
+    })
 
     closeFormBtn.forEach((btn) => {
         btn.addEventListener("click", (e) => {

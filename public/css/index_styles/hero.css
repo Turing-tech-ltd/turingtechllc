@@ -67,7 +67,7 @@
 }
 
 .path{
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     background-color: var(--white-color);
     width: 100%;
@@ -81,6 +81,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     align-items: center;
+    display: none;
 }
 
 .path > div{
@@ -107,6 +108,10 @@
     padding: 0.5rem;
     border: 1px solid rgba(0, 0, 0, 0.5);
     border-radius: 5px;
+}
+
+.path label{
+    cursor: pointer;
 }
 
 @media (min-width: 430px){
@@ -146,5 +151,6 @@
 
     .path{
         font-size: 1.4rem;
+        max-width: 40rem;
     }
 }
