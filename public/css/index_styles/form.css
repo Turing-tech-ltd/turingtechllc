@@ -161,10 +161,10 @@ input.linkedin{
     text-transform: lowercase;
 }
 
-/* #duration_container,
+#duration_container,
 #experience_container{
     display: none;
-} */
+} 
 
 @media (min-width: 768px){
     form{
