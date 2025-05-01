@@ -110,38 +110,66 @@
 
         <div class="entry">
             <div class="horizontal">
-                <input type="text" name="first_name" placeholder="first name" required>
-                <input type="text" name="last_name" placeholder="last name" required>
+                <div>
+                    <label for="first_name">first name</label>
+                    <input type="text" name="first_name" placeholder="first name" required>
+                </div>
+                <div>
+                    <label for="last_name">last name</label>
+                    <input type="text" name="last_name" placeholder="last name" required>
+                </div>
             </div>
             <div class="horizontal">
-                <input type="email" class="email" name="email" placeholder="email" required>
-                <input type="text" name="company_name" placeholder="company name" required>
+                <div>
+                    <label for="email">email</label>
+                    <input type="email" class="email" name="email" placeholder="email" required>
+                </div>
+                <div>
+                    <label for="company_name">company name</label>
+                    <input type="text" name="company_name" placeholder="company name" required>
+                </div>
             </div>
-            <input type="text" name="job_title" placeholder="job title" required>
+            <div class="form_entry">
+                <label for="job_title">job title</label>
+                <input type="text" name="job_title" placeholder="job title" required>
+            </div>
             <div class="multi_option">
-                <select name="skills_required_id" id="skills_req" class="level" required>
-                    <option value="Skills Required" id="">Skills Required</option>
-                </select>
+                <div class="form_entry">
+                    <label for="skills_required_id">skill required</label>
+                    <select name="skills_required_id" id="skills_req" class="level" required>
+                        <option value="Skills Required" id="">Skills Required</option>
+                    </select>
+                </div>
                 <textarea name="other_skills" id="other_skills" placeholder="Specify" class="skill_req"></textarea>
             </div>
             <div class="multi_option" id="duration_container">
-                <select name="duration_id" id="duration" class="level" required>
-                    <option value="Duration" id="">Duration</option>
-                </select>
+                <div class="form_entry">
+                    <label for="duration_id">duration</label>
+                    <select name="duration_id" id="duration" class="level" required>
+                        <option value="Duration" id="">Duration</option>
+                    </select>
+                </div>
                 <textarea name="other_duration" id="other_duration" placeholder="Specify" class="duration"></textarea>
             </div>
-            <div id="experience_container">
+            <div id="experience_container" class="form_entry">
+                <label for="experience_level_id">experience level</label>
                 <select name="experience_level_id" id="exp_level" class="level" required>
                     <option value="experience level" id="">experience level</option>
                 </select>
             </div>
             <div class="multi_option" id="work_mode_container">
-                <select name="work_mode_id" id="work_mode" class="level" required>
-                    <option value="Work Mode" id="">Work Mode</option>
-                </select>
+                <div class="form_entry">
+                    <label for="work_mode_id">work mode</label>
+                    <select name="work_mode_id" id="work_mode" class="level" required>
+                        <option value="Work Mode" id="">Work Mode</option>
+                    </select>
+                </div>
                 <textarea name="other_work_mode" id="other_work_mode" placeholder="Specify" class="workmode"></textarea>
             </div>
-            <textarea name="comment" id="comment" placeholder="Additional comment"></textarea>
+            <div class="form_entry">
+                <label for="comment">comment</label>
+                <textarea name="comment" id="comment" placeholder="Additional comment"></textarea>
+            </div>
         </div>
 
         <button type="submit" id="submit">submit</button>
@@ -155,38 +183,68 @@
 
         <div class="entry">
             <div class="horizontal">
-                <input type="text" name="first_name" placeholder="first name" required>
-                <input type="text" name="last_name" placeholder="last name" required>
+                <div>
+                    <label for="first_name">first name</label>
+                    <input type="text" name="first_name" placeholder="first name" required>
+                </div>
+                <div>
+                    <label for="last_name">last name</label>
+                    <input type="text" name="last_name" placeholder="last name" required>
+                </div>
             </div>
             <div class="horizontal">
-                <input type="email" class="email" name="email" placeholder="email" required>
-                <input type="tel" name="phone_number" placeholder="Phone number" required>
+                <div>
+                    <label for="email">email</label>
+                    <input type="email" class="email" name="email" placeholder="email" required>
+                </div>
+                <div>
+                    <label for="phone_number">phone number</label>
+                    <input type="tel" name="phone_number" placeholder="Phone number" required>
+                </div>
             </div>
             <div class="horizontal">
-                <select name="qualification_id" id="qualification" class="level" required>
-                    <option value="Highest Educational qualification" id="">Highest educational qualification</option>
-                </select>
+                <div>
+                    <label for="qualification">highest educational qualification</label>
+                    <select name="qualification_id" id="qualification" class="level" required>
+                        <option value="Highest Educational qualification" id="">choose</option>
+                    </select>
+                </div>
 
-                <select name="country_id" id="country" class="level" required>
-                    <option value="Country of Residence" id="">Country of residence</option>
-                </select>
+                <div>
+                    <label for="country">country of residence</label>
+                    <select name="country_id" id="country" class="level" required>
+                        <option value="Country of Residence" id="">choose country</option>
+                    </select>
+                </div>
             </div>
 
             <div class="horizontal">
-                <select name="program_id" id="program" class="level" required>
-                    <option value="Select a program" id="">Select a program</option>
-                </select>
+                <div>
+                    <label for="program">select a program</label>
+                    <select name="program_id" id="program" class="level" required>
+                        <option value="Select" id="">choose</option>
+                    </select>
+                </div>
 
-                <select name="referral_source_id" id="referral" class="level" required>
-                    <option value="How did you hear about us" id="">How did you hear about us</option>
-                </select>
+                <div>
+                    <label for="referral">how did you hear about us?</label>
+                    <select name="referral_source_id" id="referral" class="level" required>
+                        <option value="How did you hear about us" id="">choose</option>
+                    </select>
+                </div>
             </div>
 
             <div class="horizontal">
-                <select name="user_type_id" id="user-type" class="level" required>
-                    <option value="Which option best describes you?" id="">Which option best describes you?</option>
-                </select>
-                <textarea name="comments" id="comment" placeholder="Ask a question or leave a comment" class=""></textarea>
+                <div>
+                    <label for="user-type">Which option best describes you?</label>
+                    <select name="user_type_id" id="user-type" class="level" required>
+                        <option value="Which option best describes you?" id="">Choose</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="comment">comment</label>
+                    <textarea name="comments" id="comment" placeholder="Ask a question or leave a comment" class=""></textarea>
+                </div>
             </div>
             
             <div class="service">
@@ -208,26 +266,45 @@
 
         <div class="entry">
             <div class="horizontal">
-                <input type="text" name="first_name" placeholder="first name" required>
-                <input type="text" name="last_name" placeholder="last name" required>
+                <div>
+                    <label for="first_name">first name</label>
+                    <input type="text" name="first_name" placeholder="first name" required>
+                </div>
+                <div>
+                    <label for="last_name">last name</label>
+                    <input type="text" name="last_name" placeholder="last name" required>
+                </div>
             </div>
             <div class="horizontal">
-                <input type="email" class="email" name="email" placeholder="email" required>
-                <input type="text" name="linkedin_profile" placeholder="Linkedin profile" required class="linkedin">
+                <div>
+                    <label for="email">email</label>
+                    <input type="email" class="email" name="email" placeholder="email" required>
+                </div>
+                <div>
+                    <label for="linkedin_profile">linkedin profile</label>
+                    <input type="text" name="linkedin_profile" placeholder="Linkedin profile" required class="linkedin">
+                </div>
             </div>
             <div class="horizontal">
-                <select name="language_id" id="language" class="level" required>
-                    <option value="Language" id="">Language</option>
-                </select>
+                <div>
+                    <label for="language_id">language</label>
+                    <select name="language_id" id="language" class="level" required>
+                        <option value="Language" id="">Choose</option>
+                    </select>
+                </div>
 
-                <select name="proficiency_id" id="proficiency" class="level" required>
-                    <option value="proficiency level" id="">Language Proficiency Level</option>
-                </select>
+                <div>
+                    <label for="proficiency_id">language proficiency level</label>
+                    <select name="proficiency_id" id="proficiency" class="level" required>
+                        <option value="proficiency level" id="">Choose</option>
+                    </select>
+                </div>
             </div>
 
-            <div class="">
+            <div class="form_entry">
+                <label for="skills_id">skills</label>
                 <select name="skills_id" id="skills" class="level" required>
-                    <option value="Skills" id="">Skills</option>
+                    <option value="Skills" id="">Choose</option>
                 </select>
             </div>
         </div>

@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Show experience container when a duration is selected
     durationDropDown.addEventListener("change", (e) => {
         if (e.target.value) {
-            experienceContainer.style.display = "block"; // Show experience container
+            experienceContainer.style.display = "flex"; // Show experience container
         } else {
             experienceContainer.style.display = "none"; // Hide experience container
         }
