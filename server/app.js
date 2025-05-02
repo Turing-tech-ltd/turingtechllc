@@ -107,7 +107,7 @@ app.get('/country', async (req, res) => {
 // Fetch programs
 app.get('/program', async (req, res) => {
     try {
-        const result = await client.query('SELECT id, programs FROM program');
+        const result = await client.query('SELECT id, programs FROM program ORDER BY id ASC');
         res.json(result.rows);
     } catch (err) {
         console.error('Error fetching referral sources:', err);
@@ -181,6 +181,8 @@ app.post('/company-form', async (req, res) => {
             email,
             company_name,
             job_title,
+            no_of_skills,
+            years_of_exp,
             skills_required_id,
             other_skills,
             duration_id,
@@ -194,9 +196,9 @@ app.post('/company-form', async (req, res) => {
         // SQL query to insert data into the placement table
         const query = `
             INSERT INTO placement_test 
-                (first_name, last_name, email, company_name, job_title, skills_required_id, other_skills, duration_id, other_duration, experience_level_id, work_mode_id, other_work_mode,  comment)
+                (first_name, last_name, email, company_name, job_title, no_of_skills, years_of_exp, skills_required_id, other_skills, duration_id, other_duration, experience_level_id, work_mode_id, other_work_mode,  comment)
             VALUES 
-                ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13)
+                ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15)
         `;
 
         // Parameterized query values
@@ -206,6 +208,8 @@ app.post('/company-form', async (req, res) => {
             email,
             company_name,
             job_title,
+            no_of_skills,
+            years_of_exp,
             skills_required_id,
             other_skills,
             duration_id,
