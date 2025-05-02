@@ -105,7 +105,10 @@
     <form action="/company-form" method="post" class="container" id="company-form">
         <div class="form_header">
             <h2>In Need Of Outsourced Services</h2>
-            <button class="close_btn_form"><i class="fa-solid fa-xmark"></i></button>
+            <div class="action_btn">                
+                <button class="close_btn_form"><i class="fa-solid fa-xmark"></i></button>
+                <button class="refresh-btn"><i class="fa-solid fa-rotate-right"></i></button>
+            </div>
         </div>
 
         <div class="entry">
@@ -132,6 +135,16 @@
             <div class="form_entry">
                 <label for="job_title">job title</label>
                 <input type="text" name="job_title" placeholder="job title" required>
+            </div>
+            <div class="horizontal">
+                <div>
+                    <label for="no_of_skills">Number of skills</label>
+                    <input type="number" class="no_skills" name="no_of_skills" placeholder="Enter number" required>
+                </div>
+                <div>
+                    <label for="years_of_exp">Years of experience</label>
+                    <input type="number" name="years_of_exp" placeholder="Enter number" required>
+                </div>
             </div>
             <div class="multi_option">
                 <div class="form_entry">
@@ -178,7 +191,10 @@
     <form action="/training-form" method="post" class="container" id="training-form" >
         <div class="form_header">
             <h2>Applying To Be Trained</h2>
-            <button class="close_btn_form"><i class="fa-solid fa-xmark"></i></button>
+            <div class="action_btn">                
+                <button class="close_btn_form"><i class="fa-solid fa-xmark"></i></button>
+                <button class="refresh-btn"><i class="fa-solid fa-rotate-right"></i></button>
+            </div>
         </div>
 
         <div class="entry">
@@ -261,7 +277,10 @@
     <form action="/remote-form" method="post" class="container" id="remote-form" >
         <div class="form_header">
             <h2>Looking For Remote Work</h2>
-            <button class="close_btn_form"><i class="fa-solid fa-xmark"></i></button>
+            <div class="action_btn">                
+                <button class="close_btn_form"><i class="fa-solid fa-xmark"></i></button>
+                <button class="refresh-btn"><i class="fa-solid fa-rotate-right"></i></button>
+            </div>
         </div>
 
         <div class="entry">

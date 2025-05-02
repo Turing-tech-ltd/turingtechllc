@@ -1,5 +1,6 @@
 const getStartedBtn = document.getElementById("get_started");
 const closeFormBtn = document.querySelectorAll(".close_btn_form");
+const refreshBtn = document.querySelectorAll(".refresh-btn");
 const companyFormContainer = document.getElementById("company-form");
 const trainingFormContainer = document.getElementById("training-form");
 const innerHeroContainer = document.getElementById("hero-inner");
@@ -57,4 +58,12 @@ document.addEventListener("DOMContentLoaded", () => {
             options.style.display = "flex"; // Show options when a form is closed
         });
     });
+
+    refreshBtn.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            companyFormContainer.reset();
+            remoteFormContainer.reset();
+            trainingFormContainer.reset();
+        })
+    })
 });
