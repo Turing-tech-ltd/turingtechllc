@@ -89,17 +89,33 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
     }
 
-    trainingForm.addEventListener("submit", async () => {
+    trainingForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
 
         const formData = {
-            name: trainingForm.name.value,
+            first_name: trainingForm.first_name.value,
+            last_name: trainingForm.last_name.value,
             email: trainingForm.email.value,
-            course: trainingForm.course.value,
+            phone_number: trainingForm.phone_number.value,
+            qualification_id: trainingForm.qualification_id.value,
+            country_id: trainingForm.country_id.value,
+            program_id: trainingForm.program_id.value,
+            referral_source_id: trainingForm.referral_source_id.value,
+            user_type_id: trainingForm.user_type_id.value,
+            comments: trainingForm.comments.value,
           };
           console.log(formData);
 
-        const { error } = await supabase
-        .from('countries')
-        .insert({ id: 1, name: 'Mordor' })
+        const { error } = await supabaseClient
+        .from('training_application_test')
+        .insert(formData)
+
+        if (!error){
+            console.log("Form submitted successfully!");
+            trainingForm.reset();
+            window.location.assign("submit.html");
+        } else {
+            console.log(error);
+        }
     })
 });
