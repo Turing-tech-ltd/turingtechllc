@@ -88,6 +88,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
     }
 
+    // Post training form data
     trainingForm.addEventListener("submit", async (e) => {
         e.preventDefault();
 

@@ -54,6 +54,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
     }
 
+    // Post remote form data
     remoteForm.addEventListener("submit", async (e) => {
         e.preventDefault();
 
