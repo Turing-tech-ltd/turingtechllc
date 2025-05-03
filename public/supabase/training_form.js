@@ -1,5 +1,4 @@
 import supabaseClient from "./config.js";
-console.log(supabaseClient);
 
 const trainingForm = document.getElementById("training-form");
 const qualificationDropDown = document.getElementById("qualification");
