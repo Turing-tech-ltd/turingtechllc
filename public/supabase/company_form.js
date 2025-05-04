@@ -5,6 +5,7 @@ const skillsReqDropDown = document.getElementById("skills_req");
 const durationDropDown = document.getElementById("duration");
 const experienceLevelDropDown = document.getElementById("exp_level");
 const workModeDropDown = document.getElementById("work_mode");
+const yearsOfExpDropDown = document.getElementById("years_of_exp");
 
 document.addEventListener("DOMContentLoaded", async () => {
     // Fetch skills Required
@@ -20,6 +21,22 @@ document.addEventListener("DOMContentLoaded", async () => {
             option.value = item.id;
             option.textContent = item.skills_required;
             skillsReqDropDown.appendChild(option);
+        });
+    }
+
+    // Fetch years of experience
+    const { data: expData, error: expError } = await supabaseClient
+        .from('years_of_exp')
+        .select("*");
+
+    if (expError) {
+        console.log(expError);
+    } else {
+        expData.forEach((item) => {
+            const option = document.createElement("option");
+            option.value = item.id;
+            option.textContent = item.years_of_exp;
+            yearsOfExpDropDown.appendChild(option);
         });
     }
 
@@ -82,7 +99,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             company_name: companyForm.company_name.value,
             job_title: companyForm.job_title.value,
             no_of_skills: companyForm.no_of_skills.value,
-            years_of_exp: companyForm.years_of_exp.value,
+            years_of_exp_id: companyForm.years_of_exp_id.value,
             skills_required_id: companyForm.skills_required_id.value,
             other_skills: companyForm.other_skills.value,
             duration_id: companyForm.duration_id.value,

@@ -105,8 +105,14 @@
         <div class="form_header">
             <h2>In Need Of Outsourced Services</h2>
             <div class="action_btn">                
-                <button class="close_btn_form"><i class="fa-solid fa-xmark"></i></button>
-                <button class="refresh-btn"><i class="fa-solid fa-rotate-right"></i></button>
+                <span class="alg_btn_txt">
+                    <button class="close_btn_form"><i class="fa-solid fa-xmark"></i></button>
+                    <span>close</span>
+                </span>
+                <span class="alg_btn_txt">
+                    <button class="refresh-btn"><i class="fa-solid fa-rotate-right"></i></button>
+                    <span>refresh</span>
+                </span>
             </div>
         </div>
 
@@ -135,16 +141,6 @@
                 <label for="job_title">job title</label>
                 <input type="text" name="job_title" placeholder="job title" required>
             </div>
-            <div class="horizontal">
-                <div>
-                    <label for="no_of_skills">Number of skills</label>
-                    <input type="number" class="no_skills" name="no_of_skills" placeholder="Enter number" required>
-                </div>
-                <div>
-                    <label for="years_of_exp">Years of experience</label>
-                    <input type="number" name="years_of_exp" placeholder="Enter number" required>
-                </div>
-            </div>
             <div class="multi_option">
                 <div class="form_entry">
                     <label for="skills_required_id">skill required</label>
@@ -153,6 +149,18 @@
                     </select>
                 </div>
                 <textarea name="other_skills" id="other_skills" placeholder="Specify" class="skill_req"></textarea>
+            </div>
+            <div class="horizontal">
+                <div>
+                    <label for="no_of_skills">Number of persons needed per skill area</label>
+                    <input type="number" class="no_skills" name="no_of_skills" placeholder="Enter number" required>
+                </div>
+                <div>
+                    <label for="years_of_exp">Years of experience</label>
+                    <select name="years_of_exp_id" id="years_of_exp" class="level" required>
+                        <option value="Choose">Choose</option>
+                    </select>
+                </div>
             </div>
             <div class="multi_option" id="duration_container">
                 <div class="form_entry">
@@ -191,8 +199,14 @@
         <div class="form_header">
             <h2>Applying To Be Trained</h2>
             <div class="action_btn">                
-                <button class="close_btn_form"><i class="fa-solid fa-xmark"></i></button>
-                <button class="refresh-btn"><i class="fa-solid fa-rotate-right"></i></button>
+                <span class="alg_btn_txt">
+                    <button class="close_btn_form"><i class="fa-solid fa-xmark"></i></button>
+                    <span>close</span>
+                </span>
+                <span class="alg_btn_txt">
+                    <button class="refresh-btn"><i class="fa-solid fa-rotate-right"></i></button>
+                    <span>refresh</span>
+                </span>
             </div>
         </div>
 
@@ -277,8 +291,14 @@
         <div class="form_header">
             <h2>Looking For Remote Work</h2>
             <div class="action_btn">                
-                <button class="close_btn_form"><i class="fa-solid fa-xmark"></i></button>
-                <button class="refresh-btn"><i class="fa-solid fa-rotate-right"></i></button>
+                <span class="alg_btn_txt">
+                    <button class="close_btn_form"><i class="fa-solid fa-xmark"></i></button>
+                    <span>close</span>
+                </span>
+                <span class="alg_btn_txt">
+                    <button class="refresh-btn"><i class="fa-solid fa-rotate-right"></i></button>
+                    <span>refresh</span>
+                </span>
             </div>
         </div>
 
@@ -319,11 +339,14 @@
                 </div>
             </div>
 
-            <div class="form_entry">
-                <label for="skills_id">skills</label>
-                <select name="skills_id" id="skills" class="level" required>
-                    <option value="Skills" id="">Choose</option>
-                </select>
+            <div class="multi_option" id="job_skills">
+                <div class="form_entry">
+                    <label for="skills_id">skills</label>
+                    <select name="skills_id" id="skills" class="level" required>
+                        <option value="Skills" id="">Choose</option>
+                    </select>
+                </div>
+                <textarea name="other_job_skills" id="other_job_skills" placeholder="Specify"></textarea>
             </div>
         </div>
 

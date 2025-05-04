@@ -6,12 +6,15 @@ const durationContainer = document.getElementById("duration_container");
 const experienceContainer = document.getElementById("experience_container");
 const workModeDropDown = document.getElementById("work_mode");
 const workModeTextArea = document.querySelector(".workmode");
+const jobSkillsDropDown = document.getElementById("skills")
+const jobSkillsTextArea = document.getElementById("other_job_skills");
+const yearsOfExpDropDown = document.getElementById("years_of_exp");
 
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    // Show duration container when a skill is selected
-    skillsDropDown.addEventListener("change", (e) => {
+    // Show duration container when a years of experience is selected
+    yearsOfExpDropDown.addEventListener("change", (e) => {
         if (e.target.value) {
             durationContainer.style.display = "flex"; // Show duration container
         } else {
@@ -48,6 +51,14 @@ document.addEventListener("DOMContentLoaded", () => {
             workModeTextArea.style.display = "block";
         } else {
             workModeTextArea.style.display = "none";
+        }
+    })
+
+    jobSkillsDropDown.addEventListener("change", (e) => {
+        if (e.target.value === "12"){
+            jobSkillsTextArea.style.display = "block";
+        } else {
+            jobSkillsTextArea.style.display = "none";
         }
     })
 });
