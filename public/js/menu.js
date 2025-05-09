@@ -19,3 +19,8 @@ document.addEventListener("click", () => {
         header.style.backgroundColor = "";
     }
 });
+
+// Footer
+const year = new Date().getFullYear();
+const yearElement = document.getElementById("year");
+yearElement.textContent = year;

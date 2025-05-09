@@ -49,6 +49,8 @@
 
 .outsourced_section img{
     width: 100%;
+    border-radius: 10px;
+    border: 1px solid rgb(75, 75, 75);
 }
 
 .outsourced_section a{
