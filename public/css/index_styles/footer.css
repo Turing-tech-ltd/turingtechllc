@@ -1,0 +1,125 @@
+:root{
+    --white-color: #f6f6f6;
+    --shade-of-black: rgb(26, 26, 26);
+    --bg-lite: rgb(37, 37, 37);
+    --lite-black: rgb(44, 44, 44);
+    --deep-dark: #121212;
+    --orange: #ff9933;
+    --red: #e5062f;
+    /* fonts */
+    --poppins: "Poppins", sans-serif;
+    --roboto: "Roboto", sans-serif;
+    --form-input: #e7e7e7;
+}
+
+footer{
+    padding: 3rem 0;
+}
+
+footer h3{
+    color: var(--white-color);
+    font-size: 1.3rem;
+}
+
+footer img{
+    width: 5rem;
+    height: auto;
+}
+
+footer .footer_inner{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+footer .footer_inner > div:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    gap: 2rem;
+    text-align: center;
+}
+
+footer ul li{
+    list-style-type: none;
+    color: rgb(145, 145, 145);
+    font-family: var(--roboto);
+    font-size: 1.1rem;
+}
+
+footer .footer_inner > div:nth-child(2){
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+footer .footer_inner figure{
+    grid-row: 1;
+}
+
+.icons{
+    grid-row: 2;
+    display: flex;
+    gap: 3rem;
+}
+
+.icons button{
+    background: none;
+    border: none;
+}
+
+.icons i{
+    font-size: 2rem;
+    color: var(--white-color);
+}
+
+footer p{
+    font-size: 1.1rem;
+    font-family: var(--poppins);
+}
+
+@media (min-width: 600px){
+    footer .footer_inner > div:nth-child(1){
+        flex-direction: row;
+        justify-content: center;
+        gap: 4rem;
+    }
+
+    footer .footer_inner > div:nth-child(2){
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: flex-start;
+    }
+
+    .footer_inner figure{
+        grid-column: 2 ;
+        grid-row: 1;
+        justify-self: center;
+    }
+
+    .icons{
+        grid-column: 3;
+        grid-row: 1;
+        gap: 2.5rem;
+        justify-self: flex-end;
+    }
+
+    .icons i{
+        font-size: 2rem;
+    }
+
+    footer img{
+        width: 4rem;
+    }
+}
+
+@media (min-width: 1000px){
+    .icons i{
+        font-size: 2.7rem;
+    }
+
+    footer img{
+        width: 7rem;
+    }
+}
