@@ -64,6 +64,7 @@
 
 .work_section img{
     width: 100%;
+    border-radius: 10px;
 }
 
 .work_section h3,
@@ -91,6 +92,7 @@
     margin: 0.7rem 0;
     transition: 0.3s;
     font-family: var(--poppins);
+    border-radius: 10px;
 }
 
 .work_section a:hover{
@@ -123,6 +125,6 @@
     }
 
     .work_section h3{
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
 }
