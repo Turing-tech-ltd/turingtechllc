@@ -68,6 +68,86 @@
     cursor: pointer;
 }
 
+/* programs section */
+.programs_section{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 2.5rem;
+}
+
+.programs_inner{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--shade-of-black);
+}
+
+.programs_inner > div{
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    background-color: var(--bg-lite);
+    transition: 0.3s;
+    
+    overflow: hidden;
+}
+
+.programs_inner > div:hover{
+    background-color: var(--lite-black);
+}
+
+
+.programs_inner > div:hover h2{
+    text-decoration: underline;
+}
+
+.programs_section figure{
+    width: 100%;
+    height: 15rem;
+}
+
+.programs_section img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 1px solid rgb(75, 75, 75);
+}
+
+.programs_section h2,p{
+    color: var(--white-color);
+}
+
+.programs_section h2{
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.programs_section p{
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: rgb(222, 222, 222);
+}
+
+.programs_section a{
+    align-self: flex-start;
+    background-color: var(--red);
+    padding: 0.7rem 3rem;
+    font-size: 0.95rem;
+    text-transform: capitalize;
+    margin: 0.7rem 0;
+    transition: 0.3s;
+}
+
+.programs_section a:hover{
+    filter: brightness(0.85);
+}
+
+
 
 @media (min-width: 430px){
     .programs_hero h1,
@@ -79,6 +159,15 @@
 
 @media (min-width: 600px){
     
+}
+
+@media (min-width: 700px){
+    .programs_section{
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+
+      
 }
 
 @media (min-width: 768px){
@@ -98,5 +187,20 @@
 
     .programs-hero-inner button{
         font-size: 1.3rem;
+    }
+}
+
+@media (min-width: 1000px){
+    .programs_section{
+        grid-template-columns: repeat(3, 1fr);
+        
+    }
+
+    .programs_section figure{
+        height: 13rem;
+    }
+
+    .programs_section p{
+        font-size: 1rem;
     }
 }
