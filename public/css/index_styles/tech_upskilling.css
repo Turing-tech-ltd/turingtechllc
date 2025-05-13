@@ -32,6 +32,8 @@
     gap: 1rem;
     background-color: var(--bg-lite);
     transition: 0.3s;
+    
+    overflow: hidden;
 }
 
 .tech_inner > div:hover{
@@ -49,6 +51,9 @@
 
 .tech_upskill_section img{
     width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 1px solid rgb(75, 75, 75);
 }
 
 .tech_upskill_section h2,p{

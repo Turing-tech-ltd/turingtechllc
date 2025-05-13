@@ -60,10 +60,13 @@
 
 .work_section figure{
     width: 100%;
+    min-height: 10rem;
 }
 
 .work_section img{
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 10px;
 }
 
