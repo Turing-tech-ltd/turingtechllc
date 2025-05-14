@@ -15,6 +15,7 @@
     <!-- css styles -->
     <link rel="stylesheet" href="./css/index_styles/header.css">
     <link rel="stylesheet" href="./css/contact.css">
+    <link rel="stylesheet" href="./css/index_styles/footer.css">
 
     <!-- Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -83,8 +84,126 @@
     <!-- Form section -->
 
     <section class="contact-us container top-margin">
-        
+
+        <div class="contact-details">
+            <h2>contact details</h2>
+
+            <div>
+                <div class="location">
+                    <span><i class="fa-solid fa-location-dot"></i></span>
+                    <div class="location-inner">
+                        <h3>Us Office</h3>
+                        <p>
+                            4571 Wigley Estates Road, Marietta GA 30066 USA.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="phone">
+                    <span><i class="fa-solid fa-phone"></i></span>
+                    <div>
+                        <h3>phone number</h3>
+                        <div>
+                            <p>+1 (770) 990-8219</p>
+                            <p>+ (234) 903 944 3999</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="email">
+                    <span><i class="fa-solid fa-envelope"></i></span>
+                    <div>
+                        <h3>email address</h3>
+                        <p>info@turingtechacademy.com</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <form>
+            <h2>get in touch</h2>
+
+            <div>
+                <div class="full_name">
+                    <div>
+                        <label for="first_name">first name</label>
+                        <input type="text" placeholder="First Name" required>
+                    </div>
+                    <div>
+                        <label for="last_name">last name</label>
+                        <input type="text" placeholder="Last Name">
+                    </div>
+                </div>
+
+                <div class="form_email">
+                    <div>
+                        <label for="email">email</label>
+                        <input type="email" placeholder="example@gmail.com" required>
+                    </div>
+                    <div>
+                        <label for="subject">subject</label>
+                        <input type="text" placeholder="Subject">
+                    </div>
+                </div>
+                <textarea name="message" id="message" placeholder="Enter Message" rows="6"></textarea>
+            </div>
+
+            <button>submit</button>
+        </form>
+
     </section>
+
+    <footer class="top-margin container">
+        <div class="footer_inner">
+            <div>
+                <!-- <div>
+                    <h3>Heading</h3>
+                    <ul>
+                        <li>Lorem ipsum dolor</li>
+                        <li>Lorem ipsum dolor</li>
+                        <li>Lorem ipsum dolor</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>Heading</h3>
+                    <ul>
+                        <li>Lorem ipsum dolor</li>
+                        <li>Lorem ipsum dolor</li>
+                        <li>Lorem ipsum dolor</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>Heading</h3>
+                    <ul>
+                        <li>Lorem ipsum dolor</li>
+                        <li>Lorem ipsum dolor</li>
+                        <li>Lorem ipsum dolor</li>
+                    </ul>
+                </div> -->
+            </div>
+
+            <div>
+                <div>
+                    <p>Copyright © <span id="year"></span> Turing Tech</p>
+                </div>
+
+                <figure>
+                    <img src="./images/turing logo.jpg" alt="Turing Tech Logo">
+                </figure>
+
+                <div class="icons">
+                    <button><i class="fa-brands fa-instagram"></i></button>
+                    <button><i class="fa-brands fa-linkedin-in"></i></button>
+                    <button><i class="fa-brands fa-tiktok"></i></button>
+                    <button><i class="fa-brands fa-facebook-f"></i></button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
 
 
     <script src="./js/menu.js"></script>
