@@ -141,6 +141,7 @@
     text-transform: capitalize;
     margin: 0.7rem 0;
     transition: 0.3s;
+    border-radius: 10px;
 }
 
 .programs_section a:hover{
