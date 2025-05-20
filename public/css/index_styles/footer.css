@@ -13,7 +13,7 @@
 }
 
 footer{
-    padding: 3rem 0;
+    padding: 1rem 0;
 }
 
 footer h3{
@@ -37,14 +37,24 @@ footer .footer_inner > div:nth-child(1){
     flex-direction: column;
     /* align-items: center; */
     gap: 2rem;
-    text-align: center;
 }
 
 footer ul li{
     list-style-type: none;
     color: rgb(145, 145, 145);
     font-family: var(--roboto);
-    font-size: 1.1rem;
+    font-size: 0.8rem;
+}
+
+footer a{
+    font-size: 0.8rem;
+    color: rgb(167, 167, 167);
+    transition: color 0.3s ease-in-out;
+    text-transform: capitalize;
+}
+
+footer a:hover{
+    color: rgb(231, 231, 231);
 }
 
 footer .footer_inner > div:nth-child(2){
@@ -83,8 +93,7 @@ footer p{
 @media (min-width: 600px){
     footer .footer_inner > div:nth-child(1){
         flex-direction: row;
-        justify-content: center;
-        gap: 4rem;
+        justify-content: space-between;
     }
 
     footer .footer_inner > div:nth-child(2){
