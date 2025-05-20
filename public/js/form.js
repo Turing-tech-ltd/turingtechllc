@@ -9,6 +9,7 @@ const remoteFormContainer = document.getElementById("remote-form");
 const options = document.querySelector(".path");
 const closeOptionBtn = document.getElementById("closeBtn");
 const contentWrapper = document.querySelector(".top_wrapper");
+const outsourcedWrapper = document.querySelector(".outsourced_section");
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -36,6 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 options.style.display = "none"; // Hide options when a form is displayed
                 contentWrapper.classList.add("blurred"); // Add blur effect
+                outsourcedWrapper.classList.add("blurred");
             }
         });
     });
@@ -54,6 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
             trainingFormContainer.style.display = "none";
             remoteFormContainer.style.display = "none";
             contentWrapper.classList.remove("blurred"); // Remove blur effect
+            outsourcedWrapper.classList.remove("blurred");
 
             options.style.display = "flex"; // Show options when a form is closed
         });

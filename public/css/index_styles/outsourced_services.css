@@ -16,6 +16,13 @@
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     gap: 2.5rem;
+    transition: filter 0.3s ease;
+}
+
+/* Add blurred to outsourced section */
+.outsourced_section.blurred{
+    filter: blur(3px); /* Apply blur effect */
+    pointer-events: none; /* Prevent interaction with blurred content */
 }
 
 .outsourced_section h2,p{
