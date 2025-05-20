@@ -18,7 +18,7 @@ footer{
 
 footer h3{
     color: var(--white-color);
-    font-size: 1.3rem;
+    font-size: 1.15rem;
 }
 
 footer img{
@@ -42,7 +42,7 @@ footer .footer_inner > div:nth-child(1){
 footer ul li{
     list-style-type: none;
     color: rgb(145, 145, 145);
-    font-family: var(--roboto);
+    font-family: var(--poppins);
     font-size: 0.8rem;
 }
 
@@ -51,6 +51,7 @@ footer a{
     color: rgb(167, 167, 167);
     transition: color 0.3s ease-in-out;
     text-transform: capitalize;
+    font-weight: 400;
 }
 
 footer a:hover{
@@ -86,7 +87,7 @@ footer .footer_inner figure{
 }
 
 footer p{
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-family: var(--poppins);
 }
 
