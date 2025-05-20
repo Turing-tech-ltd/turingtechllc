@@ -18,7 +18,7 @@ footer{
 
 footer h3{
     color: var(--white-color);
-    font-size: 1.15rem;
+    font-size: 1.3rem;
 }
 
 footer img{
@@ -43,11 +43,11 @@ footer ul li{
     list-style-type: none;
     color: rgb(145, 145, 145);
     font-family: var(--poppins);
-    font-size: 0.8rem;
+    font-size: 0.85rem;
 }
 
 footer a{
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     color: rgb(167, 167, 167);
     transition: color 0.3s ease-in-out;
     text-transform: capitalize;
