@@ -76,6 +76,11 @@
     gap: 2.5rem;
 }
 
+.programs_section > div{
+    border-radius: 10px;
+    overflow: hidden;
+}
+
 .programs_inner{
     display: flex;
     flex-direction: column;
