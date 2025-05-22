@@ -1,0 +1,54 @@
+  :root{
+    --white-color: #f6f6f6;
+    --shade-of-black: rgb(26, 26, 26);
+    --deep-dark: #121212;
+    --orange: #ff9933;
+    --red: #e5062f;
+    /* fonts */
+    --poppins: "Poppins", sans-serif;
+    --roboto: "Roboto", sans-serif;
+    --form-input: #e7e7e7;
+  }
+
+.thank-you{
+    width: 100%;
+    max-width: 30rem;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.thank-you h1{
+    font-size: 2rem;
+    color: var(--white-color);
+    font-family: var(--poppins);
+    text-transform: capitalize;
+}
+
+.thank-you, p,button{
+    color: white;
+    font-size:  1rem;
+}
+
+.thank-you a{
+    font-family: var(--poppins);
+    background-color: var(--red);
+    padding: 0.7rem 3rem;
+    border-radius: 10px;
+    font-weight: 600;
+    text-transform: capitalize;
+    /* margin: 0.7rem 0; */
+    transition: filter 0.3s ease-in-out;
+}
+
+.thank-you a:hover{
+    filter: brightness(0.95);
+}
+
+.thank-you p{
+    text-align: center;
+}
