@@ -36,6 +36,7 @@ header figure {
 header img{
     width: 3rem;
     height: auto;
+    border-radius: 3px;
 }
 
 header figcaption{
@@ -95,16 +96,22 @@ header button i{
     opacity: 0; 
     transition: opacity 0.3s ease, display 0.3s ease; 
     z-index: 30;
+    overflow-y: auto;
 }
 
 .dropdown li{
     list-style: none;
-    line-height: 4rem;
+    line-height: 2.3rem;
 }
 
 .dropdown a {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     text-transform: capitalize;
+    transition: color 0.3s ease-in-out;
+}
+
+.dropdown a:hover {
+    color: var(--red);
 }
 
 header li a:hover{
@@ -118,7 +125,7 @@ header li a:hover{
 
 @media (min-width: 768px){
     .dropdown a {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
     }
 }
 
@@ -165,7 +172,11 @@ header li a:hover{
     }
 
     .dropdown a {
-        font-size: 2rem;
+        font-size: 1.6rem;
+    }
+
+    .dropdown li{
+        line-height: 2.7rem;
     }
     
 }

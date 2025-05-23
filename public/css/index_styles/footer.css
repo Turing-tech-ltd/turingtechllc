@@ -89,12 +89,14 @@ footer .footer_inner figure{
 footer p{
     font-size: 1rem;
     font-family: var(--poppins);
+    color: var(--white-color);
 }
 
 @media (min-width: 600px){
     footer .footer_inner > div:nth-child(1){
         flex-direction: row;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
 
     footer .footer_inner > div:nth-child(2){
@@ -121,12 +123,17 @@ footer p{
 
     footer img{
         width: 4rem;
+        border-radius: 3px;
     }
 }
 
 @media (min-width: 1000px){
     .icons i{
         font-size: 1.2rem;
+    }
+
+    footer .footer_inner > div:nth-child(1){
+        gap: 3rem;
     }
 
     footer img{
