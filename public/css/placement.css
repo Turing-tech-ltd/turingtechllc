@@ -13,9 +13,9 @@
 
 .placement_hero {
     min-height: 100vh;
-    background-image: url("../images/placement.jpg");
+    background-image: url("../images/contact_1.jpg");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center top;
     background-size: cover;
     display: flex;
     justify-content: center;
