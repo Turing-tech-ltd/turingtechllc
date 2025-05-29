@@ -175,8 +175,79 @@
     gap: 1rem;
 }
 
+.sub_desc > a{
+    background-color: var(--red);
+    align-self: flex-start;
+    padding: 0.7rem 2rem;
+    border-radius: 10px;
+    text-transform: capitalize;
+    margin-top: 2rem;
+    transition: filter 0.3s ease-in-out;
+}
+
+.sub_desc > a:hover{
+    filter: brightness(0.9);
+}
+
 .bold{
     font-weight: 600;
+}
+
+.course-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aqua; */
+    gap: 2rem;
+    margin-bottom: 5rem;
+}
+
+.course-details > div{
+    background-color: #e5062f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 40%;
+    max-width: 10rem;
+    height: 9rem;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.course-details figcaption h4,p{
+    margin: 0;
+}
+
+.course-details h4,
+.course-details p{
+    text-align: center;
+}
+
+.course-details h4{
+    color: var(--white-color);
+    text-transform: capitalize;
+    font-size: 0.8rem;
+}
+
+.course-details p{
+    font-size: 0.85rem;
+}
+
+.course-details figure{
+    width: 3rem;
+}
+
+.course-details img{
+    width: 3rem;
+}
+
+.course-details figcaption{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
 }
 
 
