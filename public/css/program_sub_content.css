@@ -36,6 +36,75 @@
     z-index: 1;
 }
 
+
+/* problem solving hero*/
+.problem_solving{
+    background-image: url("../images/inc_3.jpg");
+    background-position: center top;
+}
+
+.problem_solving::before{
+    opacity: 0.6;
+}
+
+/* exit project hero */
+.exit_projects{
+    background-image: url("../images/inc_4.jpg");
+}
+
+/* scalability */
+/* .scalability_hero{
+    background-image: url("../images/scalability_1.jpg");
+} */
+
+/* investment hero */
+.investment_hero{
+    background-image: url("../images/investment_2.jpg");
+}
+
+.investment_hero::before{
+    opacity: 0.1;
+}
+
+/* governments hero */
+.governments_hero{
+    background-image: url("../images/governments.jpg");
+    filter: brightness(1.1);
+}
+
+.governments_hero::before{
+    opacity: 0.1;
+}
+
+/* schools hero */
+.schools_hero{
+    background-image: url("../images/students.jpg");
+}
+
+.schools_hero::before{
+    opacity: 0.3;
+}
+
+/* enterprise hero */
+.enterprise_hero{
+    background-image: url("../images/enterprise.jpg");
+}
+
+.enterprise_hero::before{
+    opacity: 0.3;
+}
+
+/* investors hero */
+.investors_hero{
+    background-image: url("../images/investors.jpg");
+    filter: brightness(1.1);
+}
+
+.investment_hero::before{
+    opacity: 0;
+}
+
+
 .sub-hero-inner{
     z-index: 2;
     display: flex;
