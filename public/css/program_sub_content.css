@@ -139,6 +139,7 @@
     cursor: pointer;
 }
 
+/* sub section */
 .sub_section{
     width: 100%;
     max-width: 55rem;
@@ -193,12 +194,13 @@
     font-weight: 600;
 }
 
+
+/* course details */
 .course-details{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    /* background-color: aqua; */
     gap: 2rem;
     margin-bottom: 5rem;
 }
@@ -229,7 +231,7 @@
 .course-details h4{
     color: var(--white-color);
     text-transform: capitalize;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
 }
 
 .course-details p{
@@ -286,6 +288,21 @@
     /* training_section */
     .subCard h3{
         font-size: 1.7rem;
+    }
+
+    .course-details h4{
+        font-size: 0.95rem;
+    }
+
+    .course-details p{
+        font-size: 0.95rem;
+    }
+}
+
+@media (min-width: 1500px){
+    /* sub section */
+    .sub_section{
+        max-width: 75rem;
     }
 }
 
