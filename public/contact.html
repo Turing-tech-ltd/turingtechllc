@@ -138,7 +138,7 @@
                     </div>
                     <div>
                         <label for="last_name">last name</label>
-                        <input type="text" name="last_name" id="last_name" placeholder="Last Name">
+                        <input type="text" name="last_name" id="last_name" placeholder="Last Name" required>
                     </div>
                 </div>
 
@@ -149,10 +149,10 @@
                     </div>
                     <div>
                         <label for="subject">subject</label>
-                        <input type="text" name="subject" id="subject" placeholder="Subject">
+                        <input type="text" name="subject" id="subject" placeholder="Subject" required>
                     </div>
                 </div>
-                <textarea name="message" id="message" placeholder="Enter Message" rows="6"></textarea>
+                <textarea name="message" id="message" placeholder="Enter Message" rows="6" required></textarea>
             </div>
 
             <button type="submit">submit</button>
@@ -249,6 +249,7 @@
 
 
     <script src="./js/menu.js"></script>
+    <script src="./supabase/contact_form.js" type="module"></script>
 </body>
 
 </html>

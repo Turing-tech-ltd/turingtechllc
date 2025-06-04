@@ -68,7 +68,6 @@ document.addEventListener("DOMContentLoaded", async () => {
             skills_id: remoteForm.skills_id.value,
             other_job_skills: remoteForm.other_job_skills.value,
           };
-          console.log(formData);
 
         const { error } = await supabaseClient
         .from('remote_application_test')

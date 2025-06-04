@@ -104,7 +104,6 @@ document.addEventListener("DOMContentLoaded", async () => {
             user_type_id: trainingForm.user_type_id.value,
             comments: trainingForm.comments.value,
           };
-          console.log(formData);
 
         const { error } = await supabaseClient
         .from('training_application_test')
