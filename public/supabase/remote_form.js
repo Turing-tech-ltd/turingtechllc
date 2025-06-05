@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", async () => {
           };
 
         const { error } = await supabaseClient
-        .from('remote_application_test')
+        .from('remote_application')
         .insert(formData)
 
         if (!error){

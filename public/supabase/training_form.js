@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", async () => {
           };
 
         const { error } = await supabaseClient
-        .from('training_application_test')
+        .from('training_application')
         .insert(formData)
 
         if (!error){
