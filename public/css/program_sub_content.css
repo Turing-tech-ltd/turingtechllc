@@ -47,6 +47,64 @@
     opacity: 0.6;
 }
 
+/* frontend hero */
+.frontend_hero{
+    background-image: url("../images/frontend_3.jpg");
+    background-position: top left;
+}
+
+.frontend_hero::before{
+    opacity: 0.3;
+}
+
+/* backend */
+.backend_hero{
+    background-image: url("../images/bkend_3.jpg");
+    background-position: top left;
+}
+
+.backend_hero::before{
+    opacity: 0.1;
+}
+
+/* mobile app */
+.mobile_app{
+    background-image: url("../images/bkend_2.jpg");
+}
+
+/* it assurance */
+.it_grc{
+    background-image: url("../images/it_assurance_1.jpg");
+}
+
+.it_grc::before{
+    opacity: 0.1;
+}
+
+/* data engineering */
+.data_engr{
+    background-image: url("../images/data_engr_2.jpg");
+}
+
+.data_engr::before{
+    opacity: 0.3;
+}
+
+/* a_i */
+.a_i{
+    background-image: url("../images/ai_1.jpg");
+    background-position: center center;
+}
+
+.a_i::before{
+    opacity: 0.2;
+}
+
+/* blockchain */
+.blockchain_hero{
+    background-image: url("../images/blockchain_1.jpg");
+}
+
 /* exit project hero */
 .exit_projects{
     background-image: url("../images/inc_4.jpg");
