@@ -150,7 +150,7 @@
                     In our blockchain training program, you'll learn the fundamentals of how blockchain works, explore real-world use cases, and gain hands-on experience developing blockchain applications. Whether you're aiming for a career in fintech, cybersecurity, or Web3, blockchain is a future-ready skill that's reshaping the digital landscape.
                 </p>
 
-                <a href="../index.html">enroll now</a>
+                <button id="enrollNowBtn">enroll now</button>
             </div>
         </div>
     </section>
@@ -245,6 +245,16 @@
 
 
     <script src="../js/menu.js"></script>
+
+    <script>
+        document.getElementById("enrollNowBtn").addEventListener("click", () => {
+        
+            localStorage.setItem("selectedPath", "training");
+
+            window.location.href = "../index.html";
+        });
+
+    </script>
 </body>
 
 </html>

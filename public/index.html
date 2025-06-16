@@ -614,6 +614,21 @@
     <script src="./js/form.js"></script>
     <!-- <script src="./js/main.js"></script> -->
     <script src="./js/handleform.js"></script>
+
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+        const selectedPath = localStorage.getItem("selectedPath");
+
+        if (selectedPath) {
+
+            document.getElementById("get_started").click();
+
+            // Clear the flag so it doesn't repeat on refresh
+            localStorage.removeItem("selectedPath");
+        }
+    });
+
+    </script>
 </body>
 
 </html>

@@ -151,7 +151,7 @@
                      Backend development is critical to building reliable and high-performing web applications. Our bootcamp training gives you the hands-on experience and real-world projects needed to master backend skills and prepare for a career as a web developer, backend engineer, or full-stack developer.
                 </p>
 
-                <a href="../index.html">enroll now</a>
+                <button id="enrollNowBtn">enroll now</button>
             </div>
         </div>
     </section>
@@ -246,6 +246,16 @@
 
 
     <script src="../js/menu.js"></script>
+
+    <script>
+        document.getElementById("enrollNowBtn").addEventListener("click", () => {
+        
+            localStorage.setItem("selectedPath", "training");
+
+            window.location.href = "../index.html";
+        });
+
+    </script>
 </body>
 
 </html>

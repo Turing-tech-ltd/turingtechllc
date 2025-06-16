@@ -149,7 +149,7 @@
                      Our training programs are designed to equip you with hands-on skills in IT auditing, risk assessment, policy development, and regulatory compliance. Whether you're starting your career or looking to advance into a specialized role, learning IT Assurance and GRC will open doors to high-impact positions in cybersecurity, IT governance, and beyond.
                 </p>
 
-                <a href="../index.html">enroll now</a>
+                <button id="enrollNowBtn">enroll now</button>
             </div>
         </div>
     </section>
@@ -244,6 +244,16 @@
 
 
     <script src="../js/menu.js"></script>
+
+    <script>
+        document.getElementById("enrollNowBtn").addEventListener("click", () => {
+        
+            localStorage.setItem("selectedPath", "training");
+
+            window.location.href = "../index.html";
+        });
+
+    </script>
 </body>
 
 </html>

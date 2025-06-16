@@ -150,7 +150,7 @@
                     In our AI training program, you'll gain hands-on experience in building real-world AI models, learn how to train and evaluate algorithms, and understand the ethical considerations behind AI technologies. Whether you're entering the tech field or upskilling for the future, AI is a powerful area with growing demand across industries—from healthcare and finance to robotics and marketing.
                 </p>
 
-                <a href="../index.html">enroll now</a>
+                <button id="enrollNowBtn">enroll now</button>
             </div>
         </div>
     </section>
@@ -245,6 +245,16 @@
 
 
     <script src="../js/menu.js"></script>
+
+    <script>
+        document.getElementById("enrollNowBtn").addEventListener("click", () => {
+        
+            localStorage.setItem("selectedPath", "training");
+
+            window.location.href = "../index.html";
+        });
+
+    </script>
 </body>
 
 </html>

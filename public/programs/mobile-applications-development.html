@@ -153,7 +153,7 @@
                      By learning Android development, you gain the skills to create apps that solve real-world problems, reach a global audience, and potentially launch your own product. Our training program equips you with hands-on experience, industry-relevant tools, and the confidence to thrive in a fast-growing mobile tech landscape.
                 </p>
 
-                <a href="../index.html">enroll now</a>
+                <button id="enrollNowBtn">enroll now</button>
             </div>
         </div>
     </section>
@@ -247,6 +247,16 @@
     </footer>
 
     <script src="../js/menu.js"></script>
+
+    <script>
+        document.getElementById("enrollNowBtn").addEventListener("click", () => {
+        
+            localStorage.setItem("selectedPath", "training");
+
+            window.location.href = "../index.html";
+        });
+
+    </script>
 </body>
 
 </html>

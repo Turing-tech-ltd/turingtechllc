@@ -234,17 +234,21 @@
     gap: 1rem;
 }
 
-.sub_desc > a{
+.sub_desc > button{
     background-color: var(--red);
+    color: var(--white-color);
+    border: none;
     align-self: flex-start;
-    padding: 0.7rem 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.7rem 2.5rem;
     border-radius: 10px;
     text-transform: capitalize;
     margin-top: 2rem;
     transition: filter 0.3s ease-in-out;
 }
 
-.sub_desc > a:hover{
+.sub_desc > button:hover{
     filter: brightness(0.9);
 }
 

@@ -150,7 +150,7 @@
                     Whether you're transitioning into tech or leveling up your skills, learning data engineering opens the door to high-demand careers in technology, finance, healthcare, and more. Our bootcamp gives you the hands-on training and real-world projects you need to start building production-ready data systems from day one.
                 </p>
 
-                <a href="../index.html">enroll now</a>
+                <button id="enrollNowBtn">enroll now</button>
             </div>
         </div>
     </section>
@@ -245,6 +245,16 @@
 
 
     <script src="../js/menu.js"></script>
+
+    <script>
+        document.getElementById("enrollNowBtn").addEventListener("click", () => {
+        
+            localStorage.setItem("selectedPath", "training");
+
+            window.location.href = "../index.html";
+        });
+
+    </script>
 </body>
 
 </html>

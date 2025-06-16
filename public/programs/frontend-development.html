@@ -153,7 +153,7 @@
                     In short, frontend development is where design meets technology. Our training program equips you with hands-on skills and industry tools to build attractive, interactive, and high-performance web applications—preparing you for a dynamic and rewarding career in tech.
                 </p>
 
-                <a href="../index.html">enroll now</a>
+                <button id="enrollNowBtn">enroll now</button>
             </div>
         </div>
     </section>
@@ -248,6 +248,16 @@
 
 
     <script src="../js/menu.js"></script>
+
+    <script>
+        document.getElementById("enrollNowBtn").addEventListener("click", () => {
+        
+            localStorage.setItem("selectedPath", "training");
+
+            window.location.href = "../index.html";
+        });
+
+    </script>
 </body>
 
 </html>
