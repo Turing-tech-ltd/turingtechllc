@@ -35,6 +35,7 @@
 .work_section > div > div{
     background-color: var(--bg-lite);
     transition: background-color 0.3s ease-in-out;
+    border-radius: 10px;
 }
 
 .work_section > div > div:hover{
