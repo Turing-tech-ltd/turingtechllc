@@ -49,11 +49,12 @@
 
 /* frontend hero */
 .frontend_hero{
-    background-image: url("../images/frontend_7.jpg");
+    background-image: url("../images/frontend_6.jpg");
+    background-position: top;
 }
 
 .frontend_hero::before{
-    opacity: 0.3;
+    opacity: 0.2;
 }
 
 /* backend */
@@ -102,6 +103,10 @@
 /* blockchain */
 .blockchain_hero{
     background-image: url("../images/blockchain_1.jpg");
+}
+
+.blockchain_hero::before{
+    opacity: 0.3;
 }
 
 /* exit project hero */
