@@ -15,7 +15,7 @@
     min-height: 100vh;
     background-image: url("../images/placements.jpg");
     background-repeat: no-repeat;
-    background-position: center top;
+    background-position:  top left;
     background-size: cover;
     display: flex;
     justify-content: center;

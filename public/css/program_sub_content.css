@@ -60,7 +60,7 @@
 /* backend */
 .backend_hero{
     background-image: url("../images/bk_4.jpg");
-    background-position: top left;
+    background-position: center top;
 }
 
 .backend_hero::before{
@@ -75,6 +75,7 @@
 /* it assurance */
 .it_grc{
     background-image: url("../images/it_assurance_1.jpg");
+    background-position: center left;
 }
 
 .it_grc::before{
@@ -93,7 +94,7 @@
 /* a_i */
 .a_i{
     background-image: url("../images/ai_1.jpg");
-    background-position: center center;
+    background-position: center left;
 }
 
 .a_i::before{
