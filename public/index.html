@@ -522,6 +522,8 @@
         </div>
     </section>
 
+    <div class="divider top-margin"></div>
+
     <!-- Footer -->
     <footer class="top-margin container">
         <div class="footer_inner">
@@ -616,17 +618,30 @@
     <script src="./js/handleform.js"></script>
 
     <script>
-        window.addEventListener("DOMContentLoaded", () => {
+       document.addEventListener("DOMContentLoaded", () => {
         const selectedPath = localStorage.getItem("selectedPath");
 
-        if (selectedPath) {
-
+        if (selectedPath === "training") {
+            // Open the popup
             document.getElementById("get_started").click();
 
-            // Clear the flag so it doesn't repeat on refresh
+            // Wait a short moment to ensure popup is rendered
+            setTimeout(() => {
+            const radio = document.querySelector('input[name="path"][value="training"]');
+            if (radio) {
+                radio.checked = true;
+
+                // Trigger change event manually if needed
+                const event = new Event('change', { bubbles: true });
+                radio.dispatchEvent(event);
+            }
+
             localStorage.removeItem("selectedPath");
+            }, 100); // delay to let DOM render popup first
         }
     });
+
+
 
     </script>
 </body>

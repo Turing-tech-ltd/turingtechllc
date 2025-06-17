@@ -49,8 +49,7 @@
 
 /* frontend hero */
 .frontend_hero{
-    background-image: url("../images/frontend_3.jpg");
-    background-position: top left;
+    background-image: url("../images/frontend_7.jpg");
 }
 
 .frontend_hero::before{
@@ -59,12 +58,12 @@
 
 /* backend */
 .backend_hero{
-    background-image: url("../images/bkend_3.jpg");
+    background-image: url("../images/bk_4.jpg");
     background-position: top left;
 }
 
 .backend_hero::before{
-    opacity: 0.1;
+    opacity: 0.4;
 }
 
 /* mobile app */
