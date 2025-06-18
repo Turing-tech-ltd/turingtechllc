@@ -87,7 +87,7 @@
 .path > div{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-self: flex-start;
     gap: 2rem;
 }
 
@@ -151,6 +151,6 @@
 
     .path{
         font-size: 1.4rem;
-        max-width: 40rem;
+        max-width: 35rem;
     }
 }
