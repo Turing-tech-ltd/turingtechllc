@@ -131,6 +131,10 @@
         max-width: 30rem;
     }
 
+    .training_hero{
+        background-position: center center;
+    }
+
 }
 
 @media (min-width: 960px){
