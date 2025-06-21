@@ -84,7 +84,9 @@
 
 /* data engineering */
 .data_engr{
-    background-image: url("../images/data_engr_1.jpg");
+    background-image: url("../images/data_engr_8.jpg");
+    background-position: top;
+    filter: brightness(1.25);
 }
 
 .data_engr::before{
