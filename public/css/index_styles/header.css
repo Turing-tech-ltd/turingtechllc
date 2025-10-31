@@ -116,10 +116,12 @@ header button i{
     color: var(--red);
 }
 
-.nav-item > ul{
-    /* display: none; */
+.programs{
+    display: none;
     background-color: rgba(255, 255, 255, 0.2);
     padding: 0.5rem 1.5rem;
+    width: 100%;
+    max-width: 20rem;
 }
 
 .nav-item > a,
@@ -130,13 +132,12 @@ header button i{
     color: var(--white-color);
 }
 
-.nav-item > a i,
-.programs li a i{
+.nav-item > a i{
     font-size: 1rem;
 }
 
-.programs-submenu{
-    padding: 0 1.5rem;
+.programs.showPrograms{
+    display: block;
 }
 
 header li a:hover{
