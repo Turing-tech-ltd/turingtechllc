@@ -40,9 +40,9 @@
 
         <header class="desktop">
             <figure>
-                <img src="./images/turing logo.jpg" alt="logo" loading="lazy">
+                <img src="./images/Primary Logo.png" alt="logo" loading="lazy">
     
-                <figcaption>TuringTech</figcaption>
+                <figcaption>Turing Tech</figcaption>
             </figure>
     
             <div>
@@ -66,9 +66,21 @@
         <ul class="dropdown" id="dropdown">
             <li><a href="./index.html">home</a></li>
             <li><a href="./about.html">About</a></li>
-            <li><a href="./reviews.html">Reviews</a></li>
-            <li><a href="./programs.html">Programs</a></li>
-            <li><a href="./training.html">Training</a></li>
+            <li class="nav-item">
+                <a href="#" class="nav-link" id="nav-link">Academy <i class="fa-solid fa-angle-down" id="icon"></i></a>
+                <ul class="programs" id="programs">
+                    <li>
+                        <a href="./programs.html" class="dropdown-item">Programs</a>
+                    </li>
+                    <li>
+                        <a href="./academy/reviews.html" class="dropdown-item">Reviews</a>
+                    </li>
+                    <li>
+                        <a href="./academy/faq.html" class="dropdown-item">FAQ</a>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="./learning-experience.html">Learning experience</a></li>
             <li><a href="./placement.html">Placement</a></li>
             <li><a href="./incubation.html">Incubation</a></li>
             <li><a href="./collaboration.html">Collaboration</a></li>
@@ -104,7 +116,7 @@
                        Learn how to build fast, responsive, and accessible websites using modern frontend technologies and tools.
                     </p>
         
-                    <a href="./programs/frontend-development.html">begin today</a>
+                    <a href="./academy/programs/frontend-development.html">begin today</a>
                 </div>
             </div>
         </div>
@@ -122,7 +134,7 @@
                         Build secure and efficient server-side apps, APIs, and systems using modern backend tools and practices.
                     </p>
         
-                    <a href="./programs/backend-development.html">begin today</a>
+                    <a href="./academy/programs/backend-development.html">begin today</a>
                 </div>
             </div>
         </div>
@@ -140,7 +152,7 @@
                         Explore how to design and build functional Android apps using tools and frameworks tailored for mobile devices.
                     </p>
         
-                    <a href="./programs/mobile-applications-development.html">begin today</a>
+                    <a href="./academy/programs/mobile-applications-development.html">begin today</a>
                 </div>
             </div>
         </div>
@@ -157,7 +169,7 @@
                         Learn key IT risk, governance, and compliance concepts to support secure and well-managed systems.
                     </p>
         
-                    <a href="./programs/grc.html">begin today</a>
+                    <a href="./academy/programs/grc.html">begin today</a>
                 </div>
             </div>
         </div>
@@ -174,7 +186,7 @@
                         Learn to collect, process, and organize large data sets with tools that power real-time and analytics systems.
                     </p>
         
-                    <a href="./programs/data-engineering.html">begin today</a>
+                    <a href="./academy/programs/data-engineering.html">begin today</a>
                 </div>
             </div>
         </div>
@@ -191,7 +203,7 @@
                         Dive into the world of AI to build smart systems using data, algorithms, and real-world problem-solving methods.
                     </p>
         
-                    <a href="./programs/artificial-intelligence.html">begin today</a>
+                    <a href="./academy/programs/artificial-intelligence.html">begin today</a>
                 </div>
             </div>
         </div>
@@ -208,7 +220,7 @@
                         Understand blockchain basics and learn how to build simple decentralized applications and smart systems.
                     </p>
         
-                    <a href="./programs/blockchain.html">begin today</a>
+                    <a href="./academy/programs/blockchain.html">begin today</a>
                 </div>
             </div>
         </div>
@@ -225,22 +237,22 @@
                 <div>
                     <h3>Programs</h3>
                     <ul>
-                        <li><a href="./programs/frontend-development.html">Frontend Dev.</a></li>
-                        <li><a href="./programs/backend-development.html">Backend Dev.</a></li>
-                        <li><a href="./programs/mobile-applications-development.html">Mobile app Dev.</a></li>
-                        <li><a href="./programs/grc.html">IT assurance/GRC</a></li>
-                        <li><a href="./programs/data-engineering.html">Data engineering</a></li>
-                        <li><a href="./programs/blockchain.html">Blockchain</a></li>
-                        <li><a href="./programs/artificial-intelligence.html">Artificial Intelligence</a></li>
+                        <li><a href="./academy/programs/frontend-development.html">Frontend Dev.</a></li>
+                        <li><a href="./academy/programs/backend-development.html">Backend Dev.</a></li>
+                        <li><a href="./academy/programs/mobile-applications-development.html">Mobile app Dev.</a></li>
+                        <li><a href="./academy/programs/grc.html">IT assurance/GRC</a></li>
+                        <li><a href="./academy/programs/data-engineering.html">Data engineering</a></li>
+                        <li><a href="./academy/programs/blockchain.html">Blockchain</a></li>
+                        <li><a href="./academy/programs/artificial-intelligence.html">Artificial Intelligence</a></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h3>Training</h3>
+                    <h3>Academy</h3>
                     <ul>
-                        <li><a href="./training.html">cohorts</a></li>
-                        <li><a href="./training.html">schedules</a></li>
-                        <li><a href="./training.html">lecture mode</a></li>
+                        <li><a href="./programs.html">Programs</a></li>
+                        <li><a href="./academy/reviews.html">Reviews</a></li>
+                        <li><a href="./academy/faq.html">FAQ</a></li>
                     </ul>
                 </div>
 
@@ -289,13 +301,14 @@
                 </div>
 
                 <figure>
-                    <img src="./images/turing logo.jpg" alt="Turing Tech Logo">
+                    <img src="./images/Primary Logo.png" alt="Turing Tech Logo">
                 </figure>
 
                 <div class="icons">
                     <button class="instagram"><i class="fa-brands fa-instagram"></i></button>
                     <button class="linkedin"><i class="fa-brands fa-linkedin-in"></i></button>
                     <button class="tiktok"><i class="fa-brands fa-tiktok"></i></button>
+                    <button class="twitter"><i class="fa-brands fa-x-twitter"></i></button>
                     <button class="facebook"><i class="fa-brands fa-facebook-f"></i></button>
                 </div>
             </div>

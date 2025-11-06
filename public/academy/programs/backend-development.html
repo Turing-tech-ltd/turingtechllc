@@ -9,15 +9,15 @@
 
     <title>Turing Tech LLC - Frontend Development</title>
 
-    <link rel="icon" type="image/png" href="../images/favicon.ico">
+    <link rel="icon" type="image/png" href="../../images/favicon.ico">
 
     <!-- General styles -->
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../../css/styles.css">
 
     <!-- css styles -->
-    <link rel="stylesheet" href="../css/index_styles/header.css">
-    <link rel="stylesheet" href="../css/program_sub_content.css">
-    <link rel="stylesheet" href="../css/index_styles/footer.css">
+    <link rel="stylesheet" href="../../css/index_styles/header.css">
+    <link rel="stylesheet" href="../../css/program_sub_content.css">
+    <link rel="stylesheet" href="../../css/index_styles/footer.css">
 
     <!-- Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,9 +40,9 @@
 
         <header class="desktop">
             <figure>
-                <img src="../images/turing logo.jpg" alt="logo" loading="lazy">
+                <img src="../../images/Primary Logo.png" alt="logo" loading="lazy">
     
-                <figcaption>TuringTech</figcaption>
+                <figcaption>Turing Tech</figcaption>
             </figure>
     
             <div>
@@ -64,22 +64,34 @@
 
         <!-- dropdown -->
         <ul class="dropdown" id="dropdown">
-            <li><a href="../index.html">home</a></li>
-            <li><a href="../about.html">About</a></li>
-            <li><a href="../reviews.html">Reviews</a></li>
-            <li><a href="../programs.html">Programs</a></li>
-            <li><a href="../training.html">Training</a></li>
-            <li><a href="../placement.html">Placement</a></li>
-            <li><a href="../incubation.html">Incubation</a></li>
-            <li><a href="../collaboration.html">Collaboration</a></li>
-            <li><a href="../contact.html">Contact</a></li>
+            <li><a href="../../about.html">home</a></li>
+            <li><a href="../../about.html">About</a></li>
+            <li class="nav-item">
+                <a href="#" class="nav-link" id="nav-link">Academy <i class="fa-solid fa-angle-down" id="icon"></i></a>
+                <ul class="programs" id="programs">
+                    <li>
+                        <a href="../../programs.html" class="dropdown-item">Programs</a>
+                    </li>
+                    <li>
+                        <a href="../reviews.html" class="dropdown-item">Reviews</a>
+                    </li>
+                    <li>
+                        <a href="../faq.html" class="dropdown-item">FAQ</a>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="../../learning-experience.html">Learning experience</a></li>
+            <li><a href="../../placement.html">Placement</a></li>
+            <li><a href="../../incubation.html">Incubation</a></li>
+            <li><a href="../../collaboration.html">Collaboration</a></li>
+            <li><a href="../../contact.html">Contact</a></li>
         </ul>
 
         <!-- Hero -->
-        <section class="sub_hero mobile_app">
+        <section class="sub_hero backend_hero">
             <div class="sub-hero-inner container" id="hero-inner">
                 <h1> 
-                    Mobile Applications development
+                    backend development
                 </h1>
     
                 <!-- <button id="get_started">Get Started Today</button> -->
@@ -93,7 +105,7 @@
             <div class="sub_desc">
                 <div class="course-details">
                     <div>
-                        <figure><img src="../images/clock.png" alt="image of a clock"></figure>
+                        <figure><img src="../../images/clock.png" alt="image of a clock"></figure>
                         <figcaption>
                             <h4>study mode</h4>
                             <p>Zoom</p>
@@ -101,7 +113,7 @@
                     </div>
 
                     <div>
-                        <figure><img src="../images/dollar.png" alt="image representing course fee"></figure>
+                        <figure><img src="../../images/dollar.png" alt="image representing course fee"></figure>
                         <figcaption>
                             <h4>course fee</h4>
                             <p>$7, 000</p>
@@ -109,7 +121,7 @@
                     </div>
 
                     <div>
-                        <figure><img src="../images/hour-glass.png" alt="image representing duration"></figure>
+                        <figure><img src="../../images/hour-glass.png" alt="image representing duration"></figure>
                         <figcaption>
                             <h4>duration</h4>
                             <p>12 Months</p>
@@ -117,7 +129,7 @@
                     </div>
 
                     <div>
-                        <figure><img src="../images/book.png" alt="image representing class schedule"></figure>
+                        <figure><img src="../../images/book.png" alt="image representing class schedule"></figure>
                         <figcaption>
                             <h4>schedule</h4>
                             <p>6 Hrs Weekly</p>
@@ -125,33 +137,31 @@
                     </div>
                 </div>
 
-                <h3>Mobile Applications Development - Course Overview</h3>
+                <h3>Backend Development - Course Overview</h3>
 
                 <p>
-                     Android is the world's most widely used mobile operating system, powering billions of smartphones and devices globally. Its open-source nature, flexibility, and compatibility with a wide range of hardware make it a top choice for developers—and an ideal starting point for anyone looking to build a career in mobile app development.
+                     Every web application relies on a powerful behind-the-scenes engine — this is the role of <span class="bold">backend development</span>. While the frontend is what users see and interact with, the backend powers the core functionality: managing data, processing logic, and connecting to databases and external services.
                 </p>
 
                 <p>
-                    <span class="bold">Android development</span> focuses on creating apps using <span class="bold">Android Studio</span>, the official development environment provided by Google. Developers use <span class="bold">Kotlin</span> — the preferred modern programming language—or <span class="bold">Java</span> to write the app logic, and <span class="bold">XML</span> to design user interfaces. 
+                    Backend developers build and maintain this server-side infrastructure. They use languages like <span class="bold">Node.js</span>, <span class="bold">Python</span>, <span class="bold">Java</span>, <span class="bold">Ruby</span>, or <span class="bold">PHP</span> to write code that handles everything from user authentication to database interactions. Their work ensures that applications are secure, scalable, and efficient.
                 </p>
 
                 <ul>
-                     <p>Core app components include:</p>
-                     <li>Activities (the screens users interact with)</li>
-                     <li>Services (background operations)</li>
-                     <li>Broadcast Receivers (event listeners)</li>
-                     <li>Content Providers (data sharing between apps)</li>
-                     <p>
-                        All of these are configured in the <span class="bold">AndroidManifest.xml</span> file.
-                     </p>
+                     <p>Common tasks in backend development include:</p>
+                     <li>Setting up and managing servers</li>
+                     <li>Writing APIs that connect the frontend to the backend</li>
+                     <li>Designing and maintaining databases</li>
+                     <li>Implementing user authentication and authorization</li>
+                     <li>Managing the application's business logic</li>
                 </ul>
 
                 <p>
-                     The development process covers every stage of the product lifecycle—from planning and UI design to coding, testing on real and virtual devices, and publishing on the <span class="bold">Google Play Store</span>. Tools like <span class="bold">Firebase</span> (for real-time databases and authentication), <span class="bold">Room</span> (for local data storage), and <span class="bold">Jetpack libraries</span> (for UI and architecture) help developers build reliable and high-performance apps.
+                     Popular frameworks such as <span class="bold">Express (Node.js)</span>, <span class="bold">Django (Python)</span>, and <span class="bold">Spring Boot (Java)</span> help streamline development and enforce best practices.
                 </p>
 
                 <p>
-                     By learning Android development, you gain the skills to create apps that solve real-world problems, reach a global audience, and potentially launch your own product. Our training program equips you with hands-on experience, industry-relevant tools, and the confidence to thrive in a fast-growing mobile tech landscape.
+                     Backend development is critical to building reliable and high-performing web applications. Our bootcamp training gives you the hands-on experience and real-world projects needed to master backend skills and prepare for a career as a web developer, backend engineer, or full-stack developer.
                 </p>
 
                 <button id="enrollNowBtn">enroll now</button>
@@ -181,40 +191,40 @@
                 </div>
 
                 <div>
-                    <h3>Training</h3>
+                    <h3>Academy</h3>
                     <ul>
-                        <li><a href="../training.html">cohorts</a></li>
-                        <li><a href="../training.html">schedules</a></li>
-                        <li><a href="../training.html">lecture mode</a></li>
+                        <li><a href="../../programs.html">Programs</a></li>
+                        <li><a href="../reviews.html">Reviews</a></li>
+                        <li><a href="../faq.html">FAQ</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h3>Placement</h3>
                     <ul>
-                        <li><a href="../placement.html">onsite</a></li>
-                        <li><a href="../placement.html">remote</a></li>
-                        <li><a href="../placement.html">hybrid</a></li>
+                        <li><a href="../../placement.html">onsite</a></li>
+                        <li><a href="../../placement.html">remote</a></li>
+                        <li><a href="../../placement.html">hybrid</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h3>Incubation</h3>
                     <ul>
-                        <li><a href="../incubation/projects.html">projects</a></li>
-                        <li><a href="../incubation/problem-solving.html">problem solving</a></li>
-                        <li><a href="../incubation/scalability.html">scalability</a></li>
-                        <li><a href="../incubation/investment.html">investment</a></li>
+                        <li><a href="../../incubation/projects.html">projects</a></li>
+                        <li><a href="../../incubation/problem-solving.html">problem solving</a></li>
+                        <li><a href="../../incubation/scalability.html">scalability</a></li>
+                        <li><a href="../../incubation/investment.html">investment</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h3>Collaboration</h3>
                     <ul>
-                        <li><a href="../collaboration/governments.html">governments</a></li>
-                        <li><a href="../collaboration/schools.html">schools</a></li>
-                        <li><a href="../collaboration/enterprises.html">enterprises</a></li>
-                        <li><a href="../collaboration/investors.html">investors</a></li>
+                        <li><a href="../../collaboration/governments.html">governments</a></li>
+                        <li><a href="../../collaboration/schools.html">schools</a></li>
+                        <li><a href="../../collaboration/enterprises.html">enterprises</a></li>
+                        <li><a href="../../collaboration/investors.html">investors</a></li>
                     </ul>
                 </div>
 
@@ -234,21 +244,23 @@
                 </div>
 
                 <figure>
-                    <img src="../images/turing logo.jpg" alt="Turing Tech Logo">
+                    <img src="../../images/Primary Logo.png" alt="Turing Tech Logo">
                 </figure>
 
                 <div class="icons">
                     <button class="instagram"><i class="fa-brands fa-instagram"></i></button>
                     <button class="linkedin"><i class="fa-brands fa-linkedin-in"></i></button>
                     <button class="tiktok"><i class="fa-brands fa-tiktok"></i></button>
+                    <button class="twitter"><i class="fa-brands fa-x-twitter"></i></button>
                     <button class="facebook"><i class="fa-brands fa-facebook-f"></i></button>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script src="../js/menu.js"></script>
-    <script src="../js/socials.js"></script>
+
+    <script src="../../js/menu.js"></script>
+    <script src="../../js/socials.js"></script>
 
     <script>
         document.getElementById("enrollNowBtn").addEventListener("click", () => {
